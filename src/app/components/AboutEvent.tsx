@@ -33,7 +33,7 @@ const AboutEvent = () => {
                     </div>
                 </div>
                 <div className='sm:w-[50%] w-[100%] border-[1px]'>
-                    <Image className='w-[100%]' src='/rectangle4.png' alt='img1' height={400} width={400} />
+                    <Image className='w-[100%]' src='/Rectangle4.png' alt='img1' height={400} width={400} />
                 </div>
             </div>
 
