@@ -21,7 +21,7 @@ const Header = () => {
                     </div>
                     <div className='p-[40px] font-[500] text-[16px] relative text-center'>
                         <h3 className='text-center'>Get Started</h3>
-                        <span className='absolute top-14 right-[400px]'>
+                        <span className='absolute top-[45.0px] right-[250px]'>
                             <AiOutlineArrowRight />
                         </span>
                     </div>
