@@ -24,10 +24,10 @@ const AboutEvent = () => {
                         the candidates who stand out know the exact science of what
                         the person in the other chair needs to see to get to "yes".
                     </p>
-                    <div className='mt-[40px] flex sm:justify-start justify-center'>
-                        <div className='py-[17px]  border-[1px] px-1 w-[35%] relative'>
+                    <div className='mt-[40px] flex md:justify-start justify-center'>
+                        <div className='py-[10px]  border-[1px] px-1  relative'>
                             Get Registered
-                            <span className='absolute top-[21px] right-1'><AiOutlineArrowRight/></span>
+                            <span className='absolute right-[100000px] lg:top-[21px] lg:right-1'><AiOutlineArrowRight/></span>
                         </div>
 
                     </div>
