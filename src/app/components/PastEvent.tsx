@@ -32,7 +32,7 @@ const PastEvent = () => {
                     </div>
                     <div className='mt-[10px]'>
                         <h1 className='text-left font-[800] text-[16px]'>Sponsors & Partners</h1>
-                        <div className='flex justify-between py-[10px]'>
+                        <div className='flex sm:w-[100%] justify-between py-[10px]'>
                             <Image className='w-[10%]' src='/Vector.png' alt='vector' width={1000} height={1000} />
                             <Image className='w-[10%]' src='/Vector1.png' alt='vector' width={1000} height={1000} />
                             <Image className='w-[10%]' src='/Vector2.png' alt='vector' width={1000} height={1000} />
