@@ -11,7 +11,7 @@ const style1 = { color: "#2ec866", fontSize: "30px" }
 
 const Header = () => {
     return (
-        <div className='relative'>
+        <div className='relative '>
             <div className='absolute bottom-0 right-0'>
                 <Image src='/Vector7a.png' alt='vec' width={1000} height={1000} />
             </div>
