@@ -6,13 +6,13 @@ const Speak = () => {
         <div className='container mt-[30px] mb-[40px] mx-auto flex justify-center items-center text-[#FFFFFF]'>
             <div className='flex relative bg-[#0B1237] justify-center items-center rounded-[16px] border-[1px] w-[95%] h-[20%]'>
                 <div className='absolute right-[50px] sm:right-[117px] top-[20px]'>
-                    <Image src='/vector336.svg' alt='spesss' width={100} height={10}/>
+                    <Image src='/Vector336.svg' alt='spesss' width={100} height={10}/>
                 </div>
                 <div className='absolute left-[50px] sm:left-[117px] top-[20px]'>
-                    <Image src='/vector3.svg' alt='spess' width={100} height={10}/>
+                    <Image src='/Vector3.svg' alt='spess' width={100} height={10}/>
                 </div>
                 <div className='absolute left-[60px] bottom-0'>
-                    <Image src='/vector33.svg' alt='spes' width={10} height={10}/>
+                    <Image src='/Vector33.svg' alt='spes' width={10} height={10}/>
                 </div>
                 <div>
                     <div>
