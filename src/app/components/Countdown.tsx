@@ -49,8 +49,8 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
     };
 
     return (
-        <div className='flex justify-center'>
-            <div className='border-[1px] w-[100%] sm:w-[70%] rounded-[27px] bg-[#0B1237]'>
+        <div className='flex justify-center mb-[20px]'>
+            <div className='border-[1px] w-[100%] md:w-[70%] rounded-[27px] bg-[#0B1237]'>
                 <h1 className='uppercase text-center pt-[26px] font-[400] text-[16px] text-[#FFFFFF]'>Countdown to Event</h1>
                 <div className="text-center text-[#FFFFFF]">
 

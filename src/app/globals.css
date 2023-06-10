@@ -18,10 +18,47 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
+
+
+.triangle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #000000 transparent;
+}
+
+.circle::before {
+  content: "*";
+  width: 100px;
+  display: block;
+  position: absolute;
+  top: -100%;
+  right: -100%;
+  bottom: -100%;
+  left: -100%;
+  background-color: blue;
+  mask: radial-gradient(circle closest-side, transparent 50%, white);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* border-color: transparent transparent  #2EC866 transparent; */
