@@ -42,12 +42,12 @@ const Header = () => {
                         <div >
                             <h2 className='font-[800] text-[20px] md:text-[32px] md:leading-[46.7px] leading-[20px] tracking-[0.48px]'>Product, Community and Future of adoption</h2>
                         </div>
-                        <div className='pt-[20px] font-[500] text-[16px] relative text-center'>
+                        {/* <div className='pt-[20px] font-[500] text-[16px] relative text-center'>
                             <h3 className='text-center'>Get Started</h3>
                             <span className='absolute right-[10000px] md:top-[25.0px] md:right-[250px]'>
                                 <AiOutlineArrowRight />
                             </span>
-                        </div>
+                        </div> */}
                     </div>
 
                 </div>
