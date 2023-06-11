@@ -6,9 +6,9 @@ import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-ico
 const PastEvent = () => {
     return (
         <div className='container mx-auto mt-[60px]'>
-            <div className='px-[20px] sm:flex-nowrap flex-wrap flex justify-between items-center font-[800] text-center md:text-left text-[32px] pb-[20px]'>
-                <h1>Past Events</h1>
-                <div className='flex justify-between w-[20%] items-center'>
+            <div className='px-[20px] sm:flex-nowrap flex-wrap flex justify-between items-center font-[800] text-left text-[32px] pb-[20px]'>
+                <h1 className='text-[30px] md:text-[32px] whitespace-normal sm:w-[100%] w-[50%] md:font-[800] font-[500]'>Past Events</h1>
+                <div className='flex justify-between w-[40%] items-center'>
                     <BsFillArrowLeftCircleFill />
                     <BiDotsHorizontalRounded />
                     <BsFillArrowRightCircleFill />
@@ -16,14 +16,14 @@ const PastEvent = () => {
             </div>
             <div className='flex gap-[20px] md:flex-nowrap flex-wrap justify-center md:justify-between items-start  px-[20px] mt-[30px]'>
 
-                <div className='md:w-[40%] w-[100%]'>
+                <div className='md:w-[40%] mt-[20px] w-[100%]'>
                     <div>
-                        <Image src='/Rectangle13.png' alt='rect' width={500} height={400} />
+                        <Image className='object-cover' src='/Rectangle13.png' alt='rect' width={500} height={400} />
                     </div>
                 </div>
                 <div className='md:w-[60%] w-[100%]'>
                     <div>
-                        <h1 className='font-[800] text-[20px] text-center sm:text-left leading-[46.7px]'>Learning name of events</h1>
+                        <h1 className='font-[800] text-[20px] text-left leading-[46.7px]'>Lorem name of events</h1>
                         <p className='font-[500] text-[16px] leading-[27px] tracking-[0.32px]'>Crafting a beautiful portfolio and career story may seem like art, but the candidates who stand out know the exact science of what the person in the other chair needs to see to get to "yes". Crafting a beautiful portfolio and career story may seem like art, but the candidates who stand out know the exact science of what
                             the person in the other chair needs to see to get to "yes".
                             Crafting a beautiful portfolio and career story may seem like art, but the candidates who stand out know the exact science of what the person in the other chair needs to see to get to "yes".  Crafting a beautiful portfolio and career story may seem like art, but the candidates who stand out know the exact science of what

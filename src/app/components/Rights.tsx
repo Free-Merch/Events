@@ -6,7 +6,7 @@ const Rights = () => {
       <div className='bg-[#000D20] flex justify-center items-center'>
         <div className='text-[#FFFFFF]'>
           <h1 className='text-center text-[20px] font-[800] pt-[70px] mb-[20px]'>Buidl:</h1>
-          <h2 className='font-[500] text-[16px text-center] mb-[20px]'>Product Community and Future of Adoption</h2>
+          <h2 className='font-[500] text-[16px text-center mb-[20px]'>Product Community and Future of Adoption</h2>
           <h3 className='text-center font-[500] text-[12px] mb-[20px]'>Connect with us</h3>
           <div className='flex justify-between pb-[40px]'>
             <h2>Twitter</h2>
