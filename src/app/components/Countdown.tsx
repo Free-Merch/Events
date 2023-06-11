@@ -1,14 +1,9 @@
 "use client"
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image'
 
 interface CountdownProps {
     targetDate: Date;
-}
-interface timeLefts {
-    days: Number,
-    hours: Number,
-    minutes: Number,
-    seconds: Number
 }
 
 
@@ -49,36 +44,40 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
     };
 
     return (
-        <div className='flex justify-center mb-[20px]'>
-            <div className='border-[1px] w-[100%] md:w-[70%] rounded-[27px] bg-[#0B1237]'>
+        <div className='flex relative justify-center mb-[20px]'>
+
+            <div className='border-[1px] relative w-[100%] md:w-[50%] rounded-[27px] bg-[#0B1237]'>
+                <div className='absolute left-[-3%] top-[-20%]'>
+                    <Image className='md:w-[50%] w-[50%]' src='/Frame25.svg' alt='web3' width={180} height={10} />
+                </div>
                 <h1 className='uppercase text-center pt-[26px] font-[400] text-[16px] text-[#FFFFFF]'>Countdown to Event</h1>
                 <div className="text-center text-[#FFFFFF]">
 
 
-                    <div className="flex justify-evenly sm:justify-center pb-[20px]">
+                    <div className="flex justify-evenly sm:justify-around pb-[20px]">
                         <div>
                             {timeLeft.days > 0 && (
-                                <div className="sm:font-[800] font-[700] text-[20px] sm:text-[32px] ">
-                                    {timeLeft.days} <span className=''>:</span>
+                                <div className="sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
+                                    {timeLeft.days} <span className=''></span>
                                     <div className='font-[400] text-[14px] text-left'>
-                                        {timeLeft.days === 1 ? 'day' : 'days'}
+                                        {timeLeft.days === 1 ? 'day' : 'Days'}
                                     </div>
                                 </div>
                             )}
                         </div>
-                        <div className="sm:font-[800] font-[700] text-[20px] sm:text-[32px] ">
+                        <div className="sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
                             <div className="">
-                                {addLeadingZero(timeLeft.hours)} :
+                                {addLeadingZero(timeLeft.hours)}
                             </div>
                             <div className="font-[400] text-[14px] text-left">Hours</div>
                         </div>
-                        <div className="sm:font-[800] font-[700] text-[20px] sm:text-[32px] ">
+                        <div className="sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
                             <div className="text-left">
-                                {addLeadingZero(timeLeft.minutes)}  :
+                                {addLeadingZero(timeLeft.minutes)}
                             </div>
                             <div className=" font-[400] text-[14px] text-left">Mins</div>
                         </div>
-                        <div className="sm:font-[800] font-[700] text-[20px] sm:text-[32px] ">
+                        <div className="sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
                             <div className="text-left">
                                 {addLeadingZero(timeLeft.seconds)}
                             </div>

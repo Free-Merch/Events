@@ -16,7 +16,7 @@ const Speak = () => {
                 </div>
                 <div>
                     <div>
-                        <h1 className='text-center font-[800] text-[20px] md:text-[32px] pb-[30px] pt-[100px]'>Speak with us</h1>
+                        <h1 className='text-center font-[800] text-[20px] md:text-[32px] pb-[30px] pt-[100px]'>We want to hear from you</h1>
                     </div>
                     <div className='relative w-[100%] pb-[90px] rounded-[40px]'>
                         <input placeholder='Enter your email' className='md:w-[571px] w-[250px] p-[10px] md:p-[20px] rounded-[40px]' type='text' />

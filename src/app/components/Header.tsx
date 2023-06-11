@@ -3,15 +3,16 @@ import React from 'react'
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import { GiFingerPrint } from 'react-icons/gi'
 import Countdown from './Countdown'
-import Number from './Number'
 
 const targetDate = new Date('2023-12-31T23:59:59');
 const style = { color: "#2ec866", fontSize: "60px" }
-const style1 = { color: "#2ec866", fontSize: "30px" }
+const style1 = { color: "#2ec866", fontSize: "60px" }
 
 const Header = () => {
     return (
         <div className='relative '>
+            <div className="absolute left-0 bottom-[30%]"><GiFingerPrint style={style} /></div>
+            <div className="absolute right-[10%] top-[15%]"><GiFingerPrint style={style1} /></div>
             <div className='absolute bottom-0 right-0'>
                 <Image src='/Vector7a.png' alt='vec' width={1000} height={1000} />
             </div>
@@ -20,13 +21,12 @@ const Header = () => {
             </div>
             <div className='container relative mx-auto h-[90vh] flex flex-col justify-between'>
                 <div className='border-[#000000] sm:p-[0] px-[20px]'>
-                    <h1 className='text-[#000000] mt-[60px] text-[24px]  leading-[40px]'> Logo </h1>
+                    <h1 className='text-[#000000] mt-[60px] font-[600] text-[24px] uppercase leading-[40px]'> Logo </h1>
                 </div>
 
-                <div className="absolute left-[8%] bottom-[30%]"><GiFingerPrint style={style} /></div>
-                <div className="absolute right-[8%] bottom-[60%]"><GiFingerPrint style={style1} /></div>
-                <p className='absolute right-[3%] bottom-[64%] font-[500] text-[13px] rotate-[-40deg]'>Web2</p>
-                <p className='absolute right-[3%] bottom-[58%] font-[500] text-[13px] rotate-[35deg]'>Web3</p>
+
+                {/* <p className='absolute right-[3%] bottom-[64%] font-[500] text-[13px] rotate-[-40deg]'>Web2</p>
+                <p className='absolute right-[3%] bottom-[58%] font-[500] text-[13px] rotate-[35deg]'>Web3</p> */}
 
 
 

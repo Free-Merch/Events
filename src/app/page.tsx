@@ -1,22 +1,35 @@
 import Image from 'next/image'
 import AboutEvent from './components/AboutEvent'
+import Faq from './components/Faq'
 import Header from './components/Header'
+import ImageSlider from './components/ImageSlider'
 import PastEvent from './components/PastEvent'
 import Rights from './components/Rights'
 import Speak from './components/Speak'
 import Speakers from './components/Speakers'
 import Sponsors from './components/Sponsors'
 
+const images = [
+  '/Rectangle 5.png',
+  '/Rectangle 6.png',
+  '/Rectangle 7.png',
+  '/Rectangle 8.png',
+  
+  // Add more image paths here
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen ">
-      <Header/>
-      <AboutEvent/>
-      <Speakers/>
-      <Sponsors/>
-      <PastEvent/>
-      <Speak/>
-      <Rights/>
+      <Header />
+      <AboutEvent />
+      <Sponsors />
+      <Speakers />
+      <PastEvent />
+      <Speak />
+      <Faq />
+      <Rights />
+      {/* <ImageSlider images={images}/> */}
     </main>
   )
 }
