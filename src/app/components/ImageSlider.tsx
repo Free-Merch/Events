@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Image from 'next/image'
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-icons/bs';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
+import { log } from 'console';
 
 interface ImageSliderProps {
     images: string[],
@@ -14,29 +15,36 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
     const nextImage = () => {
-        if (currentImageIndex < images.length) {
-            setCurrentImageIndex(currentImageIndex - 1);
+        if (currentImageIndex < images.length - 1) {
+            setCurrentImageIndex(currentImageIndex + 1);
+            console.log('next clicked');
         }
+        
+        
 
     }
     const prevImage = () => {
         if (currentImageIndex > 0) {
             setCurrentImageIndex(currentImageIndex - 1);
+            console.log('prev clicked');
         }
+        
+        
     }
 
     return (
-        <div>
+        <div className='overflow-hidden sm:mx-0 mx-[10px] '>
             <div className='text-[#FFFFFF] flex justify-between item-center font-[800] text-[32px] tracking-[0.48px] mb-[40px] leading-[46.7px]'>
                 <h1 className='text-[30px] md:text-[32px] whitespace-normal sm:w-[100%] w-[50%] md:font-[800] font-[500]'>{spePan}</h1>
                 <div className='flex justify-between sm:w-[50%] w-[30%] items-center'>
-                    <button disabled={currentImageIndex === 0}>
-                        <BsFillArrowLeftCircleFill onClick={prevImage} className='cursor-pointer prev-btn' />
+                    <button className='pt-5' disabled={currentImageIndex === 0}>
+                        <BsFillArrowLeftCircleFill onClick={prevImage} className='cursor-pointer  transform -translate-y-1/2' />
                     </button>
 
-                    <BiDotsHorizontalRounded />
-                    <button disabled={currentImageIndex === images.length - 1}>
-                        <BsFillArrowRightCircleFill onClick={nextImage} className='cursor-pointer next-btn' />
+                    <BiDotsHorizontalRounded className='' />
+                    
+                    <button className='pt-5' disabled={currentImageIndex === images.length - 1}>
+                        <BsFillArrowRightCircleFill onClick={nextImage} className=' cursor-pointer  transform -translate-y-1/2  ' />
                     </button>
 
                 </div>
@@ -44,11 +52,14 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
             </div>
 
             <div
-                className=" flex relative  md:flex-nowrap  overflow-hidden gap-2 transition-transform duration-300"
+                className={` flex relative  gap-2 transition-transform duration-300`}
                 style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
             >
                 {images.map((image, index) => (
-                    <Image width={400} height={400} key={index} src={image} alt={`Image ${index}`} className=" blur-[2px]" />
+                    <div key={index} className="w-[90%] sm:w-full h-auto  shrink-0 sm:flex-shrink" >
+                        <Image width={400} height={400}  src={image} alt={`Image ${index}`} className=" w-full h-auto" />
+                    </div>
+                    
                 ))}
 
 

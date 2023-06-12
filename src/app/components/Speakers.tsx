@@ -18,6 +18,15 @@ const images = [
     // Add more image paths here
 ];
 
+const images1 = [
+    '/Rectangle 5.png',
+    '/Rectangle 6.png',
+    '/Rectangle 7.png',
+    '/Rectangle 8.png',
+
+    // Add more image paths here
+];
+
 
 const Speakers = () => {
     return (
@@ -31,14 +40,14 @@ const Speakers = () => {
             <div className='absolute bottom-0 '>
                 <Image className='w-[100%]' src='/Vector2.svg' alt='svg' width={1000} height={1000} />
             </div>
-            <div className='container  mx-auto'>
+            <div className='container  sm:mx-auto'>
 
                 <div className=' flex flex-col p-[0px] sm:p-[80px] '>
                     <div className=' mt-[80px] '>
                         <ImageSlider images={images} spePan='Our Speakers' />
                     </div>
                     <div className=' mt-[80px]'>
-                        <ImageSlider images={images} spePan='Our Panelists' />
+                        <ImageSlider images={images1} spePan='Our Panelists' />
                     </div>
                 </div>
 
