@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import Image from 'next/image'
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-icons/bs';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
-import { log } from 'console';
+
 
 interface ImageSliderProps {
     images: string[],
     spePan: string
 }
+
+const style = { color: "#0b1237", }
 
 
 const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
@@ -57,7 +59,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
             >
                 {images.map((image, index) => (
                     <div key={index} className="w-[90%] sm:w-full h-auto  shrink-0 sm:flex-shrink" >
-                        <Image width={400} height={400}  src={image} alt={`Image ${index}`} className=" w-full h-auto" />
+                        <Image width={400} height={400}  src={image} alt={`Image ${index}`} className="md:blur-sm w-full h-auto" />
                     </div>
                     
                 ))}
@@ -66,7 +68,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
                 <div className='absolute lg:block  hidden z-[10] h-[50%] md:h-[70%] top-[10%] left-[10%] border-[1px] bg-[#FFFFFF] w-[75%]'>
                     <div>
                         <h1 className='text-[#0b1237] text-center mt-[10px] md:mt-[30px]  font-[800] text-[20px] md:text-[40px]'>We are accepting applications</h1>
-                        <h2 className='text-center font-[500] mt-[10px] mb-[37px] text-[16px]'>Apply to be a speaker or panelist at Build:</h2>
+                        <h2 className=' relative text-center font-[500] mt-[10px] mb-[37px] text-[16px]'>Apply to be a speaker or panelist at Build: < BsFillArrowRightCircleFill style = { style } className='absolute right-[22%] xl:right-[28%] bottom-[3px] '/></h2>
                     </div>
 
                 </div>

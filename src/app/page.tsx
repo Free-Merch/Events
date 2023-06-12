@@ -30,7 +30,7 @@ export default function Home() {
       <Speak />
       <Faq />
       <Rights />
-      <ISlider images={images}/>
+      
     </main>
   )
 }
