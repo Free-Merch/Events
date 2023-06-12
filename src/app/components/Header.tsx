@@ -33,14 +33,13 @@ const Header = () => {
 
                 <div className='flex justify-center basis-[50%] items-center pt-[60px]'>
                     <div className='text-center  '>
-                        <div className='pb-[40px] '>
-                            <div className='text-[#0B1237] font-[800] text-[100px] sm:text-[160px] leading-[57.2px] tracking-[0.48px]'>Buidl:
+                        <div className='pb-[40px] flex justify-center mx-auto items-center sm:w-full w-[50%]  '>
+                            <div className=''>
+                                <Image src='/Buidl_.svg' alt='build' width={450} height={100}/>
                             </div>
-
-
                         </div>
                         <div >
-                            <h2 className='font-[800] text-[20px] md:text-[32px] md:leading-[46.7px] leading-[20px] tracking-[0.48px]'>Product, Community and Future of adoption</h2>
+                            <h2 className='font-[800] font-ppneue text-[20px] md:text-[32px] md:leading-[46.7px] leading-[20px] tracking-[0.48px]'>Product, Community and Future of adoption</h2>
                         </div>
                         {/* <div className='pt-[20px] font-[500] text-[16px] relative text-center'>
                             <h3 className='text-center'>Get Started</h3>

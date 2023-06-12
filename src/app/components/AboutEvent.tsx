@@ -4,12 +4,12 @@ import { AiOutlineArrowRight } from 'react-icons/ai'
 
 const AboutEvent = () => {
     return (
-        <div className='container   sm:mx-auto mt-[80px] mb-[40px]'>
-            <div className='flex justify-evenly md:flex-nowrap flex-wrap items-start'>
-                <div className='sm:w-[40%] order-2 w-[100%] h-auto  mx-[20px] sm:mx-auto'>
+        <div className='container mx-auto mt-[80px] mb-[40px]'>
+            <div className='flex border-[1px] justify-around md:flex-nowrap flex-wrap items-start'>
+                <div className='sm:w-[50%] order-2 w-[100%] h-auto  mx-[20px] sm:mx-auto'>
                     <p className='text-[#3DB5E6] mt-[20px] sm:mt-[25px] uppercase underline mb-[41px text-left]'>About this event</p>
-                    <h1 className='font-[800] text-[32px] whitespace-wrap  sm:text-left tracking-[0.48px] text-left mb-[20px]'>We are building ABC</h1>
-                    <p className='text-left font-[500] text-[16px] leading-[27px] tracking-[0.32px]'>
+                    <h1 className='font-[800] font-ppneue text-[32px] whitespace-wrap  sm:text-left tracking-[0.48px] text-left mb-[20px]'>We are building ABC</h1>
+                    <p className='text-left font-satoshi font-[500] text-[16px] leading-[27px] tracking-[0.32px]'>
                         Crafting a beautiful portfolio and career story may seem like art, but
                         the candidates who stand out know the exact science of what
                         the person in the other chair needs to see to get to "yes".
@@ -33,7 +33,7 @@ const AboutEvent = () => {
 
                     </div> */}
                 </div>
-                <div className=' relative sm:w-[40%]  w-[100%] '>
+                <div className=' relative sm:w-[45%]  w-[100%] '>
                     <div className='mt-[0px] sm:mt-[30px] mx-[20px] sm:mx-auto'>
                         <Image className='w-[100%]  block h-auto' src='/Maskgroup.svg' alt='img1' height={100} width={400} />
                     </div>

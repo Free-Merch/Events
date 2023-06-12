@@ -46,13 +46,13 @@ const Speakers = () => {
                     <div className=' mt-[80px] '>
                         <ImageSlider images={images} spePan='Our Speakers' />
                     </div>
-                    <div className=' mt-[80px]'>
+                    <div className=' mt-[80px] mb-[60px] sm:mb-0'>
                         <ImageSlider images={images1} spePan='Our Panelists' />
                     </div>
                 </div>
 
             </div>
-            {/* <ImageSlider images={images} /> */}
+            
 
         </div>
     )

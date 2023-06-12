@@ -4,7 +4,23 @@
 
 @import url('https://fonts.cdnfonts.com/css/satoshi');
 
-                
+@font-face {
+  font-family: 'Satoshi';
+
+  src: url('/fonts/Satoshi-Regular.woff2') format('woff2'),
+    url('/fonts/Satoshi-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Neue Machina';
+  src: url('/Neue/NeueMachina-Regular.otf') format('otf'),
+    url('/Neue/NeueMachina-Light.otf') format('otf'),
+    url('/Neue/NeueMachina-Ultrabold.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --foreground-rgb: #F5F5F5;
@@ -20,14 +36,19 @@
   }
 } */
 
+
 body {
-  font-family: 'Satoshi', sans-serif;
-                                                
+  font-family: 'Satoshi';
+  
+
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
+
+
+
 
 
 

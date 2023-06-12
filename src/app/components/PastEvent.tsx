@@ -5,9 +5,9 @@ import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-ico
 
 const PastEvent = () => {
     return (
-        <div className='container mx-auto mt-[60px]'>
+        <div className='container mx-auto mt-[50px]'>
             <div className='px-[20px] sm:flex-nowrap flex-wrap flex justify-between items-center font-[800] text-left text-[32px] pb-[20px]'>
-                <h1 className='text-[30px] md:text-[32px] whitespace-normal sm:w-[100%] w-[50%] md:font-[800] font-[500]'>Past Events</h1>
+                <h1 className='text-[30px] md:text-[32px] whitespace-normal sm:w-[100%] w-[50%] md:font-[800] font-ppneue font-[500]'>Past Events</h1>
                 <div className='flex justify-between w-[40%] items-center'>
                     <BsFillArrowLeftCircleFill />
                     <BiDotsHorizontalRounded />
@@ -23,8 +23,8 @@ const PastEvent = () => {
                 </div>
                 <div className='md:w-[60%] w-[100%]'>
                     <div>
-                        <h1 className='font-[800] text-[20px] text-left leading-[46.7px]'>Lorem name of events</h1>
-                        <p className='font-[500] text-[16px] leading-[27px] tracking-[0.32px]'>Crafting a beautiful portfolio and career story may seem like art, but the candidates who stand out know the exact science of what the person in the other chair needs to see to get to "yes". Crafting a beautiful portfolio and career story may seem like art, but the candidates who stand out know the exact science of what
+                        <h1 className='font-[800] text-[20px] text-left font-ppneue leading-[46.7px]'>Lorem name of events</h1>
+                        <p className='font-[500] text-[16px] leading-[27px] font-satoshi tracking-[0.32px]'>Crafting a beautiful portfolio and career story may seem like art, but the candidates who stand out know the exact science of what the person in the other chair needs to see to get to "yes". Crafting a beautiful portfolio and career story may seem like art, but the candidates who stand out know the exact science of what
                             the person in the other chair needs to see to get to "yes".
                             Crafting a beautiful portfolio and career story may seem like art, but the candidates who stand out know the exact science of what the person in the other chair needs to see to get to "yes".  Crafting a beautiful portfolio and career story may seem like art, but the candidates who stand out know the exact science of what
                             the person in the other chair needs to see to get to "yes".
@@ -32,14 +32,19 @@ const PastEvent = () => {
                     </div>
                     <div className='mt-[10px]'>
                         <h1 className='text-left font-[800] text-[16px]'>Sponsors & Partners</h1>
-                        <div className='flex sm:w-[100%] justify-between py-[10px]'>
-                            <Image className='w-[10%]' src='/Vector.png' alt='vector' width={1000} height={1000} />
-                            <Image className='w-[10%]' src='/Vector1.png' alt='vector' width={1000} height={1000} />
-                            <Image className='w-[10%]' src='/Vector2.png' alt='vector' width={1000} height={1000} />
-                            <Image className='w-[10%]' src='/Vector3.png' alt='vector' width={1000} height={1000} />
-                            <Image className='w-[10%]' src='/Vector4.png' alt='vector' width={1000} height={1000} />
-                            <Image className='w-[10%]' src='/Vector5.png' alt='vector' width={1000} height={1000} />
-                            <Image className='w-[10%]' src='/Vector6.png' alt='vector' width={1000} height={1000} />
+                        <div className='flex flex-col sm:w-[100%] justify-between py-[10px] ]'>
+                            <div className='flex justify-between w-[60%] mb-[20px]'>
+                                <Image className='w-[10%]' src='/Vector.png' alt='vector' width={1000} height={1000} />
+                                <Image className='w-[10%]' src='/Vector1.png' alt='vector' width={1000} height={1000} />
+                                <Image className='w-[10%]' src='/Vector2.png' alt='vector' width={1000} height={1000} />
+                            </div>
+                            <div className='flex justify-between w-[80%]'>
+                                <Image className='w-[10%]' src='/Vector3.png' alt='vector' width={1000} height={1000} />
+                                <Image className='w-[10%]' src='/Vector4.png' alt='vector' width={1000} height={1000} />
+                                <Image className='w-[10%]' src='/Vector5.png' alt='vector' width={1000} height={1000} />
+                                <Image className='w-[10%]' src='/Vector6.png' alt='vector' width={1000} height={1000} />
+
+                            </div>
 
                         </div>
                     </div>

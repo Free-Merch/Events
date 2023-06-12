@@ -1,23 +1,38 @@
 import React from 'react'
+import Image from 'next/image'
+import { SocialIcon } from 'react-social-icons'
 
 const Rights = () => {
   return (
     <div>
       <div className='bg-[#000D20] flex justify-center items-center'>
-        <div className='text-[#FFFFFF]'>
-          <h1 className='text-center text-[20px] font-[800] pt-[70px] mb-[20px]'>Buidl:</h1>
-          <h2 className='font-[500] text-[16px text-center mb-[20px]'>Product Community and Future of Adoption</h2>
+        <div className='text-[#FFFFFF] my-[60px]' >
+          <div className='flex justify-center'>
+            <Image src='/Buidl_ (1).svg' alt='footer' width={108} height={25} className='' />
+          </div>
+
+          <h2 className='font-[500] text-[16px text-center my-[18px]'>Product Community and Future of Adoption</h2>
           <h3 className='text-center font-[500] text-[12px] mb-[20px]'>Connect with us</h3>
-          <div className='flex justify-between pb-[40px]'>
-            <h2>Twitter</h2>
-            <h2>Facebook</h2>
-            <h2>Instagram</h2>
+          <div className='flex justify-between '>
+            <div className='mr-[10px]'>
+              <SocialIcon style={{ width: '30px', height: '30px' }} bgColor='#fff' url='https://twitter.com/' className='mr-[8px]' />
+              <span>Twitter</span>
+            </div>
+            <div className='mr-[10px]'>
+              <SocialIcon style={{ width: '30px', height: '30px' }} bgColor='#fff' url='https://www.Instagram.com/' className='mr-[8px]' />
+              <span>Instagram</span>
+            </div>
+            <div className='mr-[10px]'>
+              <SocialIcon style={{ width: '30px', height: '30px' }} bgColor='#fff' url='https://www.linkedin.com/' className='mr-[8px]' />
+              <span>Linkedin</span>
+            </div>
+
+
+
           </div>
         </div>
-
-
-
       </div>
+
       <div className='bg-[#161616]'>
         <p className='text-center py-[30px] text-[#D1D1D6]'>All rights reserved . | Build, 2023 </p>
       </div>
