@@ -65,10 +65,10 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
                     ))}
 
 
-                    <div className='absolute lg:block  hidden z-[10] h-[50%] md:h-[70%] top-[10%] left-[10%] border-[1px] bg-[#FFFFFF] w-[75%]'>
+                    <div className='absolute lg:block  hidden z-[10]  top-[10%] left-[10%] border-[1px] bg-[#FFFFFF] w-[75%]'>
                         <div>
-                            <h1 className='text-[#0b1237] text-center mt-[10px] md:mt-[30px]  font-[800] text-[20px] md:text-[40px]'>We are accepting applications</h1>
-                            <h2 className='relative text-center font-[500] mt-[10px] mb-[37px] text-[16px]'>Apply to be a speaker or panelist at Build: < BsFillArrowRightCircleFill style={style} className='absolute right-[22%] xl:right-[28%] bottom-[3px] ' /></h2>
+                            <h1 className='text-[#0b1237] text-center mt-[47px]  font-ppneue  font-[800] text-[20px] md:text-[40px]'>We are accepting applications</h1>
+                            <h2 className='relative text-center font-[500] mt-[10px] mb-[37px] font-satoshi text-[16px]'>Apply to be a speaker or panelist at Build: < BsFillArrowRightCircleFill size='20px' color="#2ec866" style={{ border:'#2ec866' }} className='absolute right-[22%] xl:right-[29.5%] bottom-[2px] ' /></h2>
                         </div>
 
                     </div>

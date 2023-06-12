@@ -14,13 +14,13 @@ const Speak = () => {
                 <div className='absolute left-[60px] bottom-0'>
                     <Image src='/Vector33.svg' alt='spes' width={10} height={10}/>
                 </div>
-                <div>
+                <div className='sm:w-[50%] w-full'>
                     <div>
                         <h1 className='text-center font-[800] text-[20px] md:text-[32px] font-ppneue pb-[30px] pt-[100px]'>We want to hear from you</h1>
                     </div>
                     <div className='relative w-[100%] pb-[90px] rounded-[40px]'>
-                        <input placeholder='Enter your email' className='md:w-[571px] w-[250px] font-satoshi p-[10px] md:p-[20px] rounded-[40px]' type='text' />
-                        <button className='absolute uppercase font-[700] text-[16px] py-[5px] bg-[#2EC866] rounded-[40px] md:w-[200px] w-[100px] top-[70px] right-[70px] md:top-[16px] md:right-[18px]'>send</button>
+                        <input placeholder='Enter your email' className=' w-[100%] font-satoshi p-[20px] rounded-[40px]' type='text' />
+                        <button className='absolute uppercase font-[700] text-[16px] py-[14px] bg-[#2EC866] rounded-[40px] w-[140px] w-[100px  top-[7px] right-[4%]'>send</button>
                     </div>
 
 
