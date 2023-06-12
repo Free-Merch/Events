@@ -57,8 +57,11 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
                     <div className="flex font-ppneue justify-evenly sm:justify-around pb-[20px]">
                         <div>
                             {timeLeft.days > 0 && (
-                                <div className="relative sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
-                                    {timeLeft.days} <span className='absolute right-[-80%]'>:</span>
+                                <div className=" sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
+                                    <div className='relative'>
+                                        {timeLeft.days} <span className='absolute right-[-100%]'>:</span>
+                                    </div>
+
                                     <div className='font-[400] text-[14px] text-left'>
                                         {timeLeft.days === 1 ? 'day' : 'Days'}
                                     </div>
