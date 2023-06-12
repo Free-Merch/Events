@@ -6,15 +6,15 @@ import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-ico
 const PastEvent = () => {
     return (
         <div className='container mx-auto mt-[50px]'>
-            <div className='px-[20px] sm:flex-nowrap flex-wrap flex justify-between items-center font-[800] text-left text-[32px] pb-[20px]'>
-                <h1 className='text-[30px] md:text-[32px] whitespace-normal sm:w-[100%] w-[50%] md:font-[800] font-ppneue font-[500]'>Past Events</h1>
+            <div className='px-[20px] sm:flex-nowrap flex-wrap flex justify-between items-center font-[800] mb-[38px] text-left text-[32px] mt-[80px] '>
+                <h1 className='text-[30px] md:text-[32px] whitespace-normal sm:w-[100%] w-[50%] md:font-[800] font-ppneue font-[800] '>Past Events</h1>
                 <div className='flex justify-between w-[40%] items-center'>
                     <BsFillArrowLeftCircleFill />
                     <BiDotsHorizontalRounded />
                     <BsFillArrowRightCircleFill />
                 </div>
             </div>
-            <div className='flex gap-[20px] md:flex-nowrap flex-wrap justify-center md:justify-between items-start  px-[20px] mt-[30px]'>
+            <div className='flex gap-[20px] md:flex-nowrap flex-wrap justify-center md:justify-between items-start  px-[20px]'>
 
                 <div className='md:w-[40%] mt-[20px] w-[100%]'>
                     <div>
@@ -33,17 +33,16 @@ const PastEvent = () => {
                     <div className='mt-[10px]'>
                         <h1 className='text-left font-[800] text-[16px]'>Sponsors & Partners</h1>
                         <div className='flex flex-col sm:w-[100%] justify-between py-[10px] ]'>
-                            <div className='flex justify-between w-[60%] mb-[20px]'>
-                                <Image className='w-[10%]' src='/Vector.png' alt='vector' width={1000} height={1000} />
-                                <Image className='w-[10%]' src='/Vector1.png' alt='vector' width={1000} height={1000} />
-                                <Image className='w-[10%]' src='/Vector2.png' alt='vector' width={1000} height={1000} />
+                            <div className='flex justify-between w-full sm:w-[60%] mb-[20px]'>
+                                <Image className='w-[20%]' src='/Vector.png' alt='vector' width={1000} height={1000} />
+                                <Image className='w-[20%]' src='/Vector1.png' alt='vector' width={1000} height={1000} />
+                                <Image className='w-[20%]' src='/Vector2.png' alt='vector' width={1000} height={1000} />
                             </div>
-                            <div className='flex justify-between w-[80%]'>
-                                <Image className='w-[10%]' src='/Vector3.png' alt='vector' width={1000} height={1000} />
-                                <Image className='w-[10%]' src='/Vector4.png' alt='vector' width={1000} height={1000} />
-                                <Image className='w-[10%]' src='/Vector5.png' alt='vector' width={1000} height={1000} />
-                                <Image className='w-[10%]' src='/Vector6.png' alt='vector' width={1000} height={1000} />
-
+                            <div className='flex justify-between flex-nowrap w-full sm:w-[80%]'>
+                                <Image className='w-[20%]' src='/Vector3.png' alt='vector' width={1000} height={1000} />
+                                <Image className='w-[20%]' src='/Vector4.png' alt='vector' width={1000} height={1000} />
+                                <Image className='w-[20%]' src='/Vector5.png' alt='vector' width={1000} height={1000} />
+                                <Image className='w-[20%]' src='/Vector6.png' alt='vector' width={1000} height={1000} />
                             </div>
 
                         </div>

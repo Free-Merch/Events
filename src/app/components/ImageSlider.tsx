@@ -54,7 +54,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
             </div>
             <div className='overflow-x-scroll '>
                 <div
-                    className={` flex  relative  gap-2 transition-transform duration-300`}
+                    className={` flex  relative  gap-4 transition-transform duration-300`}
                     style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
                 >
                     {images.map((image, index) => (

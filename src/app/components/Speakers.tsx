@@ -31,7 +31,7 @@ const images1 = [
 const Speakers = () => {
     return (
         <div className=' relative bg-[#0B1237] mt-[40px]'>
-            <div className='absolute right-0 sm:right-[40px] '>
+            <div className='absolute  right-0 sm:right-[40px] '>
                 <Image className='sm:w-[100%] w-[50%]' src='/Vector.svg' alt='svg' width={200} height={200} />
             </div>
             <div className='absolute top-[12%] '>
@@ -46,7 +46,7 @@ const Speakers = () => {
                     <div className=' mt-[80px] '>
                         <ImageSlider images={images} spePan='Our Speakers' />
                     </div>
-                    <div className=' mt-[80px] mb-[60px] sm:mb-0'>
+                    <div className=' mt-[80px] mb-[80px] sm:mb-0'>
                         <ImageSlider images={images1} spePan='Our Panelists' />
                     </div>
                 </div>

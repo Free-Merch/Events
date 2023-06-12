@@ -5,7 +5,7 @@ import { AiOutlineArrowRight } from 'react-icons/ai'
 const AboutEvent = () => {
     return (
         <div className='container mx-auto mt-[80px] mb-[40px]'>
-            <div className='flex border-[1px] justify-around md:flex-nowrap flex-wrap items-start'>
+            <div className='flex  justify-around md:flex-nowrap flex-wrap items-start'>
                 <div className='sm:w-[50%] order-2 w-[100%] h-auto  mx-[20px] sm:mx-auto'>
                     <p className='text-[#3DB5E6] mt-[20px] sm:mt-[25px] uppercase underline mb-[41px text-left]'>About this event</p>
                     <h1 className='font-[800] font-ppneue text-[32px] whitespace-wrap  sm:text-left tracking-[0.48px] text-left mb-[20px]'>We are building ABC</h1>
