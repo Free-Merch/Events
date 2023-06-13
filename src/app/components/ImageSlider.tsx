@@ -38,15 +38,15 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
         <div className='sm:mx-0 mx-[10px] '>
             <div className='text-[#FFFFFF] flex justify-between item-center font-[800] text-[32px] tracking-[0.48px] mb-[40px] leading-[46.7px]'>
                 <h1 className='text-[30px] md:text-[32px] whitespace-normal sm:w-[100%] w-[50%] md:font-[800] font-ppneue font-[500]'>{spePan}</h1>
-                <div className='flex justify-between sm:w-[50%] w-[30%] items-center'>
-                    <button className='pt-5' disabled={currentImageIndex === 0}>
-                        <BsFillArrowLeftCircleFill onClick={prevImage} className='cursor-pointer  transform -translate-y-1/2' />
+                <div className='flex sm:hidden justify-between sm:w-[30%] w-[30%] items-center'>
+                    <button className='' disabled={currentImageIndex === 0}>
+                        <BsFillArrowLeftCircleFill onClick={prevImage} className='cursor-pointer  transform ' />
                     </button>
 
                     <BiDotsHorizontalRounded className='' />
 
-                    <button className='pt-5' disabled={currentImageIndex === images.length - 1}>
-                        <BsFillArrowRightCircleFill onClick={nextImage} className=' cursor-pointer  transform -translate-y-1/2  ' />
+                    <button className='' disabled={currentImageIndex === images.length - 1}>
+                        <BsFillArrowRightCircleFill onClick={nextImage} className=' cursor-pointer  transform ' />
                     </button>
 
                 </div>
@@ -54,12 +54,12 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
             </div>
             <div className='overflow-x-scroll '>
                 <div
-                    className={` flex  relative  gap-4 transition-transform duration-300`}
+                    className={` flex  relative transform  gap-4 transition-transform duration-300`}
                     style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
                 >
                     {images.map((image, index) => (
                         <div key={index} className="w-[90%] sm:w-full h-auto  shrink-0 sm:flex-shrink" >
-                            <Image width={400} height={400} src={image} alt={`Image ${index}`} className="md:blur-sm w-full h-auto" />
+                            <Image width={400} height={400} src={image} alt={`Image ${index}`} className="blur-sm w-full h-auto" />
                         </div>
 
                     ))}
@@ -67,8 +67,8 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
 
                     <div className='absolute lg:block  hidden z-[10]  top-[10%] left-[10%] border-[1px] bg-[#FFFFFF] w-[75%]'>
                         <div>
-                            <h1 className='text-[#0b1237] text-center mt-[47px]  font-ppneue  font-[800] text-[20px] md:text-[40px]'>We are accepting applications</h1>
-                            <h2 className='relative text-center font-[500] mt-[10px] mb-[37px] font-satoshi text-[16px]'>Apply to be a speaker or panelist at Build: < BsFillArrowRightCircleFill size='20px' color="#2ec866" style={{ border:'#2ec866' }} className='absolute right-[22%] xl:right-[29.5%] bottom-[2px] ' /></h2>
+                            <h1 className='text-[#0b1237] text-center lg:mt-[47px] mt-[23px]  font-ppneue  font-[800] text-[20px] md:text-[40px]'>We are accepting applications</h1>
+                            <h2 className='relative text-center font-[500] mt-[10px] md:mb-[37px] mb-[17px] font-satoshi text-[16px]'>Apply to be a speaker or panelist at Build: < BsFillArrowRightCircleFill size='20px' color="#2ec866" style={{ border:'#2ec866' }} className='absolute right-[22%] xl:right-[29.5%] bottom-[2px] ' /></h2>
                         </div>
 
                     </div>

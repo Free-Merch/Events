@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import AboutEvent from './components/AboutEvent'
+import Countdown from './components/Countdown2'
 import Faq from './components/Faq'
 import Header from './components/Header'
 import ImageSlider from './components/ImageSlider'
@@ -30,6 +31,7 @@ export default function Home() {
       <Speak />
       <Faq />
       <Rights />
+      {/* <Countdown/> */}
       
     </main>
   )

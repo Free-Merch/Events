@@ -54,30 +54,32 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
                 <div className="text-center text-[#FFFFFF]">
 
 
-                    <div className=" flex font-ppneue justify-evenly sm:justify-around pb-[20px]">
+                    <div className=" flex space-x-4 font-ppneue justify-evenly sm:justify-around pb-[20px]">
 
+                        <div>
+                            {timeLeft.days > 0 && (
+                                <div className=" sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
+                                    <div className='relative text-left'>
+                                        {timeLeft.days} <span className='absolute  right-[-45%] sm:right-[-95%] font-[700] sm:text-[32px] text-[24px] '>:</span>
+                                    </div>
 
-                        {timeLeft.days > 0 && (
-                            <div className=" sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
-                                <div className='relative text-left'>
-                                    {timeLeft.days} <span className='absolute right-[-45%] sm:right-[-95%] font-[700] sm:text-[32px] text-[24px] '>:</span>
+                                    <div className='font-[400] text-[14px] text-left'>
+                                        {timeLeft.days === 1 ? 'day' : 'Days'}
+                                    </div>
                                 </div>
+                            )}
+                        </div>
 
-                                <div className='font-[400] text-[14px] text-left'>
-                                    {timeLeft.days === 1 ? 'day' : 'Days'}
-                                </div>
-                            </div>
-                        )}
 
                         <div className="sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
                             <div className="relative">
-                                {addLeadingZero(timeLeft.hours)}<span className='absolute right-[-50%] sm:right-[-110%]'>:</span>
+                                {addLeadingZero(timeLeft.hours)}<span className='absolute  right-[-50%] sm:right-[-110%]'>:</span>
                             </div>
                             <div className="font-[400] text-[14px] text-left">Hours</div>
                         </div>
                         <div className="sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
                             <div className="relative text-left">
-                                {addLeadingZero(timeLeft.minutes)}<span className='absolute right-[-50%] sm:right-[-100%]'>:</span>
+                                {addLeadingZero(timeLeft.minutes)}<span className='absolute  right-[-50%] sm:right-[-110%]'>:</span>
                             </div>
                             <div className=" font-[400] text-[14px] text-left">Mins</div>
                         </div>
