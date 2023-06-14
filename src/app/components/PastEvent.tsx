@@ -35,15 +35,15 @@ const PastEvent = () => {
                         <h1 className='text-left font-[800] text-[16px]'>Sponsors & Partners</h1>
                         <div className='flex flex-col sm:w-[100%] justify-between py-[10px] ]'>
                             <div className='flex justify-between w-full sm:w-[60%] mb-[20px]'>
-                                <Image className='w-[20%] block' src='/Vector.png' alt='vector' width={1000} height={1000} />
-                                <Image className='w-[20%] block' src='/Vector1.png' alt='vector' width={1000} height={1000} />
-                                <Image className='w-[20%] block' src='/Vector2.png' alt='vector' width={1000} height={1000} />
+                                <Image className='w-[20%] block' src='/Vector.png' alt='vector' width={100} height={18} />
+                                <Image className='w-[20%] block' src='/Vector1.png' alt='vector' width={100} height={18} />
+                                <Image className='w-[20%] block' src='/Vector2.png' alt='vector' width={100} height={18} />
                             </div>
                             <div className='flex justify-between flex-nowrap w-full sm:w-[80%]'>
-                                <Image className='w-[20%] block' src='/Vector3.png' alt='vector' width={1000} height={1000} />
-                                <Image className='w-[20%] block' src='/Vector4.png' alt='vector' width={1000} height={1000} />
-                                <Image className='w-[20%] block' src='/Vector5.png' alt='vector' width={1000} height={1000} />
-                                <Image className='w-[20%] block' src='/Vector6.png' alt='vector' width={1000} height={1000} />
+                                <Image className='w-[20%] block' src='/Vector3.png' alt='vector' width={100} height={18} />
+                                <Image className='w-[20%] block' src='/Vector4.png' alt='vector' width={100} height={18} />
+                                <Image className='w-[20%] block' src='/Vector5.png' alt='vector' width={100} height={18} />
+                                <Image className='w-[20%] block' src='/Vector6.png' alt='vector' width={100} height={18} />
                             </div>
 
                         </div>

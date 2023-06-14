@@ -59,8 +59,8 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
                         <div>
                             {timeLeft.days > 0 && (
                                 <div className=" sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
-                                    <div className='relative text-left'>
-                                        {timeLeft.days} <span className='absolute  right-[-45%] sm:right-[-95%] font-[700] sm:text-[32px] text-[24px] '>:</span>
+                                    <div className='relative inset-0 text-left'>
+                                        {timeLeft.days} <span className='absolute right-[-45%] sm:right-[-95%] font-[700] sm:text-[32px] text-[24px] '>:</span>
                                     </div>
 
                                     <div className='font-[400] text-[14px] text-left'>

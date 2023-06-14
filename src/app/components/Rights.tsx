@@ -13,7 +13,7 @@ const Rights = () => {
 
           <h2 className='font-[500] text-[16px] font-satoshi text-center my-[18px]'>Product Community and Future of Adoption</h2>
           <h3 className='text-center font-[500] text-[12px] font-satoshi mb-[20px]'>Connect with us</h3>
-          <div className='flex justify-between '>
+          <div className='flex justify-between items-center cursor-pointer '>
             <div className='mr-[10px]'>
               <SocialIcon style={{ width: '25px', height: '25px' }} bgColor='#fff' url='https://twitter.com/' className='mr-[8px]' />
               <span>Twitter</span>
