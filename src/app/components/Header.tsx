@@ -19,7 +19,7 @@ const Header = () => {
             <div className='absolute  bottom-0  left-0'>
                 <Image className='' src='/Vector8a.png' alt='vec' width={1000} height={1000} />
             </div>
-            <div className='container relative mx-auto h-[90vh] flex flex-col justify-between'>
+            <div className='container relative mx-auto h-[70vh] flex flex-col justify-between'>
                 <div className='border-[#000000] sm:p-[0] px-[20px]'>
                     <h1 className='text-[#000000] mt-[60px] font-[600] text-[24px] uppercase leading-[40px]'> Logo </h1>
                 </div>
@@ -35,7 +35,7 @@ const Header = () => {
                     <div className='text-center  '>
                         <div className='pb-[40px] flex justify-center mx-auto items-center sm:w-full w-[50%]  '>
                             <div className=''>
-                                <Image src='/Buidl_.svg' alt='build' width={450} height={100}/>
+                                <Image src='/Buidl_.svg' alt='build' width={450} height={100} />
                             </div>
                         </div>
                         <div >
