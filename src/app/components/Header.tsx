@@ -11,15 +11,15 @@ const style1 = { color: "#2ec866", fontSize: "60px" }
 const Header = () => {
     return (
         <div className='relative '>
-            <div className="absolute left-0 bottom-[30%]"><GiFingerPrint style={style} /></div>
+            <div className="absolute sm:block hidden left-0 bottom-[30%]"><GiFingerPrint style={style} /></div>
             <div className="absolute right-[10%] top-[15%]"><GiFingerPrint style={style1} /></div>
-            <div className='absolute bottom-0 right-0'>
-                <Image src='/Vector7a.png' alt='vec' width={1000} height={1000} />
+            <div className='absolute  bottom-[-20px] sm:bottom-[-15px] right-0'>
+                <Image className='' src='/Vector-Header2.svg' alt='vec' width={1000} height={200} />
             </div>
-            <div className='absolute  bottom-0  left-0'>
-                <Image className='' src='/Vector8a.png' alt='vec' width={1000} height={1000} />
+            <div className='absolute w-[100%]  bottom-[-20px]  sm:bottom-[-15px]  sm:left-0'>
+                <Image className=' ' src='/Vector-Header1.svg' alt='vec1' width={1500} height={1000} />
             </div>
-            <div className='container relative mx-auto h-[70vh] flex flex-col justify-between'>
+            <div className='container relative mx-auto h-[90vh] flex flex-col justify-between'>
                 <div className='border-[#000000] sm:p-[0] px-[20px]'>
                     <h1 className='text-[#000000] mt-[60px] font-[600] text-[24px] uppercase leading-[40px]'> Logo </h1>
                 </div>
@@ -51,7 +51,7 @@ const Header = () => {
 
                 </div>
 
-                <div >
+                <div className='' >
                     <Countdown targetDate={targetDate} />
                 </div>
 

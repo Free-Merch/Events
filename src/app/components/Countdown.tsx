@@ -44,23 +44,23 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
     };
 
     return (
-        <div className='flex  justify-center mb-[20px]'>
+        <div className='flex   justify-center mb-[20px]'>
 
-            <div className='border-[1px] relative w-[100%] md:w-[50%] rounded-[27px] bg-[#0B1237]'>
-                <div className='absolute left-[-3%] top-[-20%]'>
+            <div className='border-[1px]  mx-[20px] relative w-[90%] lg:w-[52%] rounded-[27px] bg-[#0B1237]'>
+                <div className='absolute left-[-3%] top-[-10%]'>
                     <Image className='md:w-[50%] w-[50%]' src='/Frame25.svg' alt='web3' width={180} height={10} />
                 </div>
-                <h1 className='uppercase text-center pt-[26px] font-[400] text-[16px] font-satoshi text-[#FFFFFF]'>Countdown to Event</h1>
+                <h1 className='uppercase text-center pt-[47px] pb-[21px] font-[400] text-[16px] font-satoshi text-[#FFFFFF]'>Countdown to Event</h1>
                 <div className="text-center text-[#FFFFFF]">
 
 
-                    <div className=" flex space-x-4 font-ppneue justify-evenly sm:justify-around pb-[20px]">
+                    <div className=" flex mx-auto w-[100%] sm:w-[55%] space-x-4 font-ppneue justify-evenly sm:justify-between pb-[46px]">
 
                         <div>
                             {timeLeft.days > 0 && (
                                 <div className=" sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
-                                    <div className='relative inset-0 text-left'>
-                                        {timeLeft.days} <span className='absolute right-[-45%] sm:right-[-95%] font-[700] sm:text-[32px] text-[24px] '>:</span>
+                                    <div className='relative  text-left'>
+                                        {timeLeft.days} <span className='absolute right-[-50%] sm:right-[-60%] font-[700] sm:text-[32px] text-[24px] '>:</span>
                                     </div>
 
                                     <div className='font-[400] text-[14px] text-left'>
@@ -71,15 +71,15 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
                         </div>
 
 
-                        <div className="sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
-                            <div className="relative">
-                                {addLeadingZero(timeLeft.hours)}<span className='absolute  right-[-50%] sm:right-[-110%]'>:</span>
+                        <div className="sm:font-[800] font-[700] text-[24px] sm:text-[32px] flex flex-col justify-start items-start ">
+                            <div className="relative text-left">
+                                {addLeadingZero(timeLeft.hours)}<span className='absolute  right-[-80%] sm:right-[-100%]'>:</span>
                             </div>
                             <div className="font-[400] text-[14px] text-left">Hours</div>
                         </div>
                         <div className="sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
-                            <div className="relative text-left">
-                                {addLeadingZero(timeLeft.minutes)}<span className='absolute  right-[-50%] sm:right-[-110%]'>:</span>
+                            <div className="relative text-start">
+                                {addLeadingZero(timeLeft.minutes)}<span className='absolute sm:right-[-100%]  right-[-80%]'>:</span>
                             </div>
                             <div className=" font-[400] text-[14px] text-left">Mins</div>
                         </div>

@@ -30,9 +30,9 @@ const images1 = [
 
 const Speakers = () => {
     return (
-        <div className=' relative bg-[#0B1237] mt-[40px]'>
-            <div className='absolute  right-0 sm:right-[40px] '>
-                <Image className='sm:w-[100%] w-[50%]' src='/Vector.svg' alt='svg' width={200} height={200} />
+        <div className=' relative bg-[#0B1237] mb-[80px] sm:mb-[120px] '>
+            <div className='absolute w-[25%] sm:w-[19%]  right-[10px] sm:right-[40px] '>
+                <Image className='' src='/Vector.svg' alt='svg' width={200} height={200} />
             </div>
             <div className='absolute top-[12%] '>
                 <Image className='w-[100%]' src='/Vector1.svg' alt='svg' width={1000} height={1000} />
@@ -42,12 +42,12 @@ const Speakers = () => {
             </div>
             <div className='container  sm:mx-auto'>
 
-                <div className=' flex flex-col p-[0px] sm:p-[80px] '>
-                    <div className=' mt-[80px] '>
+                <div className=' flex flex-col px-[17px] sm:px-[100px]  '>
+                    <div className=' sm:mt-[173px] mt-[80px] '>
                         <ImageSlider images={images} spePan='Our Speakers' />
                     </div>
-                    <div className=' mt-[80px] mb-[80px] sm:mb-0'>
-                        <ImageSlider images={images1} spePan='Our Panelists' />
+                    <div className=' mt-[80px] sm:mb-[170px] mb-[80px]'>
+                        <ImageSlider images={images1} spePan='Meet the Panelists' />
                     </div>
                 </div>
 
