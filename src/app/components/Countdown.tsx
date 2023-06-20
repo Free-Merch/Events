@@ -49,39 +49,36 @@ const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) 
         <div>
             {+new Date() > +new Date(eventEndDate) ?
                 <div>
-                    <div className='flex   justify-center mb-[20px]'>
+                    <div>
+                        <div className='flex  items-center justify-center mb-[20px]'>
 
-                        <div className='border-[1px]  mx-[20px] relative w-[90%] lg:w-[52%] rounded-[27px] bg-[#0B1237]'>
-                            <div className='absolute left-[-3%] top-[-10%]'>
-                                <Image className='md:w-[50%] w-[50%]' src='/Frame25.svg' alt='web3' width={180} height={10} />
-                            </div>
-
-
-                            <h1 className='uppercase text-center pt-[47px] pb-[21px] font-[400] text-[16px] font-satoshi text-[#FFFFFF]'>Event</h1>
-
-                            <div className="text-center text-[#FFFFFF]">
-
-
-                                <div className=" flex mx-auto w-[100%] text-center sm:w-[55%] items-center space-x-4 font-ppneue justify-evenly pb-[46px]">
+                            <div className='border-[1px] border-b-[10px] border-b-[#2AB160] rounded-b-[10%  mx-[20px] relative w-[90%] lg:w-[52%] rounded-[27px] bg-[#0B1237]'>
+                                <div className='absolute left-[-3%] top-[-10%]'>
+                                    <Image className='md:w-[50%] w-[50%]' src='/Frame25.svg' alt='web3' width={180} height={10} />
+                                </div>
+                                <h1 className='uppercase text-center pt-[47px] pb-[21px] font-[400] text-[16px] font-satoshi text-[#FFFFFF]'>Event</h1>
+                                <div className="text-center text-[#FFFFFF]">
+                                    <div className=" flex mx-auto w-[100%] text-center sm:w-[55%] items-center space-x-4 font-ppneue justify-evenly pb-[46px]">
 
 
-                                    <div className="sm:font-[800] text-[#2AB160] font-[700] text-[24px] sm:text-[32px] ">
-                                        Ended
+                                        <div className="sm:font-[800] text-[#2AB160] font-[700] text-[24px] sm:text-[32px] ">
+                                            Ended
+                                        </div>
                                     </div>
-
-
-
-
                                 </div>
                             </div>
+                            
+                            
 
                         </div>
 
                     </div>
+
+
                 </div> :
                 <div className='flex   justify-center mb-[20px]'>
 
-                    <div className='border-[1px]  mx-[20px] relative w-[90%] lg:w-[52%] rounded-[27px] bg-[#0B1237]'>
+                    <div className='border-[1px]  border-b-[10px] border-b-[#2AB160]  mx-[20px] relative w-[90%] lg:w-[52%] rounded-[27px] bg-[#0B1237]'>
                         <div className='absolute left-[-3%] top-[-10%]'>
                             <Image className='md:w-[50%] w-[50%]' src='/Frame25.svg' alt='web3' width={180} height={10} />
                         </div>
@@ -124,7 +121,7 @@ const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) 
                                 {timeLeft.minutes > 0 && (
                                     <div className="sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
                                         <div className="relative text-start">
-                                            {addLeadingZero(timeLeft.minutes)}<span className='absolute sm:right-[-100%]  right-[-80%]'>:</span>
+                                            {addLeadingZero(timeLeft.minutes)}<span className='absolute sm:right-[-120%]  right-[-80%]'>:</span>
                                         </div>
                                         <div className=" font-[400] text-[14px] text-left">Mins</div>
                                     </div>

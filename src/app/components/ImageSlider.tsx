@@ -63,8 +63,8 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
                     style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
                 >
                     {images.map((image, index) => (
-                        <div key={index} className="w-[90%] min-w-[25%] sm:w-full h-auto  shrink-0 sm:flex-shrink" >
-                            <Image width={276} height={276} src={image} alt={`Image ${index}`} className="blur-sm   h-auto" />
+                        <div key={index} className="w-[90%] sm:w-full h-auto min-w-[28%]  shrink-0 sm:flex-shrink" >
+                            <Image width={276} height={276} src={image} alt={`Image ${index}`} className="blur-sm w-full h-auto" />
                         </div>
 
                     ))}
