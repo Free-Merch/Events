@@ -1,6 +1,8 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image'
+import Confetti from 'react-confetti'
+
 
 interface CountdownProps {
     eventTargetDate: Date;
@@ -9,6 +11,23 @@ interface CountdownProps {
 
 
 const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) => {
+
+    const [elementWidth, setElementWidth] = useState(0)
+
+    useEffect(() => {
+      const handleResize = () => {
+        const width = document.getElementById('myElement')?.offsetWidth || 0;
+        setElementWidth(width)
+      }
+      handleResize();
+      window.addEventListener('resize',handleResize)
+    
+      return () => {
+        window.removeEventListener('resize',handleResize);
+      }
+    }, [])
+    
+
     const calculateTimeLeft = () => {
         const difference = +new Date(eventTargetDate) - +new Date();
 
@@ -52,7 +71,13 @@ const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) 
                     <div>
                         <div className='flex  items-center justify-center mb-[20px]'>
 
-                            <div className='border-[1px] border-b-[10px] border-b-[#2AB160] rounded-b-[10%  mx-[20px] relative w-[90%] lg:w-[52%] rounded-[27px] bg-[#0B1237]'>
+                            <div id='myElement' className='border-[1px] border-b-[10px] border-b-[#2AB160] rounded-b-[10%  mx-[20px] relative w-[90%] lg:w-[52%] rounded-[27px] bg-[#0B1237]'>
+                                <Confetti
+                                    width={elementWidth}
+                                    height={200}
+                                    numberOfPieces={200}
+                                    recycle={true}
+                                />
                                 <div className='absolute left-[-3%] top-[-10%]'>
                                     <Image className='md:w-[50%] w-[50%]' src='/Frame25.svg' alt='web3' width={180} height={10} />
                                 </div>
@@ -67,8 +92,8 @@ const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) 
                                     </div>
                                 </div>
                             </div>
-                            
-                            
+
+
 
                         </div>
 
@@ -78,7 +103,13 @@ const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) 
                 </div> :
                 <div className='flex   justify-center mb-[20px]'>
 
-                    <div className='border-[1px]  border-b-[10px] border-b-[#2AB160]  mx-[20px] relative w-[90%] lg:w-[52%] rounded-[27px] bg-[#0B1237]'>
+                    <div  className='border-[1px]  border-b-[10px] border-b-[#2AB160]  mx-[20px] relative w-[90%] lg:w-[52%] rounded-[27px] bg-[#0B1237]'>
+                        {/* <Confetti
+                            width={window.innerWidth/2}
+                            height={200}
+                            numberOfPieces={200}
+                            recycle={true}
+                        /> */}
                         <div className='absolute left-[-3%] top-[-10%]'>
                             <Image className='md:w-[50%] w-[50%]' src='/Frame25.svg' alt='web3' width={180} height={10} />
                         </div>
