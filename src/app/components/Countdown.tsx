@@ -26,6 +26,20 @@ const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) 
         window.removeEventListener('resize',handleResize);
       }
     }, [])
+    const [elementHeight, setElementHeight] = useState(0)
+
+    useEffect(() => {
+      const handleResizeH = () => {
+        const height = document.getElementById('myElement')?.offsetHeight || 0;
+        setElementHeight(height)
+      }
+      handleResizeH();
+      window.addEventListener('resize',handleResizeH)
+    
+      return () => {
+        window.removeEventListener('resize',handleResizeH);
+      }
+    }, [])
     
 
     const calculateTimeLeft = () => {
@@ -74,9 +88,11 @@ const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) 
                             <div id='myElement' className='border-[1px] border-b-[10px] border-b-[#2AB160] rounded-b-[10%  mx-[20px] relative w-[90%] lg:w-[52%] rounded-[27px] bg-[#0B1237]'>
                                 <Confetti
                                     width={elementWidth}
-                                    height={200}
-                                    numberOfPieces={200}
+                                    height={elementHeight}
+                                    numberOfPieces={50}
                                     recycle={true}
+                                    run={true}
+                                    
                                 />
                                 <div className='absolute left-[-3%] top-[-10%]'>
                                     <Image className='md:w-[50%] w-[50%]' src='/Frame25.svg' alt='web3' width={180} height={10} />
