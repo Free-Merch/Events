@@ -19,7 +19,8 @@ const Rights = () => {
               <a href='themicheljerry@gmail.com' className=' sm:mr-[20px] text-center '>Send a mail: themichaeljerry@gmail.com</a>
               <div className='flex justify-center '>
                 <div className='flex mr-[10px]'>
-                  <SocialIcon style={{ width: '25px', height: '25px' }} bgColor='#fff' url='https://www.whatsapp.com/' className='mr-[8px]' />
+                  <Image className='mr-[8px]' src='/WhatsAppn.svg' alt='whatsapp' width={15} height={8.5} />
+                  {/* <SocialIcon style={{ width: '25px', height: '25px' }} bgColor='#fff' url='https://www.whatsapp.com/' className='mr-[8px]' /> */}
                   <Image className='' src='/XMLID_2_.svg' alt='whatsapp' width={15} height={8.5} />
                 </div>
 
@@ -30,17 +31,18 @@ const Rights = () => {
           </div>
 
           <div className='flex justify-between items-center cursor-pointer sm:mb-[47px] mb-[74px] '>
-            <div className='mr-[10px] '>
-              <SocialIcon style={{ width: '25px', height: '25px' }} bgColor='#fff' url='https://twitter.com/' className='mr-[8px]' />
+            <div className='flex mr-[10px] '>
+              <Image className='mr-[8px]' src='/Vector-n.svg' alt='whatsapp' width={15} height={8.5} />
               <span>Twitter</span>
             </div>
-            <div className='mr-[10px]'>
-              {/* <Image className='' src='/ig.svg' alt='whatsapp' width={9} height={8.5} /> */}
-              <SocialIcon style={{ width: '25px', height: '25px' }} bgColor='#fff' url='https://www.Instagram.com/' className='mr-[8px]' />
+            <div className='flex mr-[10px]'>
+              <Image className='mr-[8px]' src='/Group-n.svg' alt='whatsapp' width={15} height={8.5} />
+              {/* <SocialIcon style={{ width: '25px', height: '25px' }} bgColor='#fff' url='https://www.Instagram.com/' className='mr-[8px]' /> */}
               <span>Instagram</span>
             </div>
-            <div className='mr-[10px]'>
-              <SocialIcon style={{ width: '25px', height: '25px' }} bgColor='#fff' url='https://www.linkedin.com/' className='mr-[8px]' />
+            <div className='flex mr-[10px]'>
+              <Image className='mr-[8px]' src='/Group1n.svg' alt='whatsapp' width={15} height={8.5} />
+              {/* <SocialIcon style={{ width: '25px', height: '25px' }} bgColor='#fff' url='https://www.linkedin.com/' className='mr-[8px]' /> */}
               <span>Linkedin</span>
             </div>
 

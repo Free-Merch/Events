@@ -1,5 +1,5 @@
 import { Disclosure } from '@headlessui/react'
-import { IoIosArrowUp } from 'react-icons/io'
+import { IoIosArrowDown } from 'react-icons/io'
 
 
 export default function Disclosures() {
@@ -11,7 +11,7 @@ export default function Disclosures() {
             <>
               <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purpl-100 sm:px-4 px-0 py-2 text-left text-sm font-medium text-[#0B1237] focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>What is ABCD with Buidl?</span>
-                <IoIosArrowUp
+                <IoIosArrowDown
                   className={`${
                     open ? 'rotate-180 transform' : ''
                   } h-5 w-5 text-[#0B1237]`}
