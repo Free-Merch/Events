@@ -8,6 +8,7 @@ import Disclosures from './Disclosure'
 // import { ChevronUpIcon } from '@heroicons/react/20/solid'
 
 const Faq = () => {
+    
     return (
         <div className=' '>
             <div className='container   sm:mx-auto ]'>

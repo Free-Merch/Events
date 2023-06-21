@@ -2,8 +2,6 @@ import Image from 'next/image'
 import AboutEvent from './components/AboutEvent'
 import Faq from './components/Faq'
 import Header from './components/Header'
-import ImageSlider from './components/ImageSlider'
-import ISlider from './components/ISlider'
 import PastEvent from './components/PastEvent'
 import Rights from './components/Rights'
 import Speak from './components/Speak'
@@ -30,6 +28,7 @@ export default function Home() {
       <Speak />
       <Faq />
       <Rights />
+      
     
       
     </main>

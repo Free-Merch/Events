@@ -1,27 +1,27 @@
+'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import { RxDotFilled } from 'react-icons/rx';
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-icons/bs'
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import ISlider from './ISlider';
+
+const images = [
+    '/Rectangle 5.png',
+    '/Rectangle 6.png',
+    '/Rectangle 7.png',
+    '/Rectangle 8.png',
+
+    // Add more image paths here
+];
 
 const PastEvent = () => {
+
     return (
         <div className='container mx-auto sm:mb-[90px] mb-[50px]'>
+            <ISlider images={images} />
 
-            <div className='px-[20px] sm:flex-nowrap flex-wrap flex justify-between items-center font-[800] mb-[48px] text-left text-[32px] '>
-                <h1 className='text-[30px] md:text-[32px] whitespace-normal sm:w-[100%] w-[50%] md:font-[800] font-ppneue font-[800] '>Past Events</h1>
-                <div className='flex justify-between  items-center'>
-                    <BsFillArrowLeftCircleFill />
-                    <div className='flex'>
-                        <RxDotFilled size={10} className='' />
-                        <RxDotFilled size={10} className='' />
-                        <RxDotFilled size={10} className='' />
-                        <RxDotFilled size={10} className='' />
-                    </div>
-                    <BsFillArrowRightCircleFill />
-                </div>
-            </div>
-            <div className='flex gap-[48px] md:flex-nowrap flex-wrap justify-center md:justify-between items-star  px-[20px]'>
-
+            {/* <div className='flex gap-[48px] md:flex-nowrap flex-wrap justify-center md:justify-between   px-[20px]'>
                 <div className='md:w-[33%] mt-[13px] w-[100%]'>
                     <div>
                         <Image className='object-cover block h-full' src='/Rectangle13.png' alt='rect' width={450} height={450} />
@@ -55,7 +55,7 @@ const PastEvent = () => {
                     </div>
 
                 </div>
-            </div>
+            </div> */}
 
         </div>
     )
