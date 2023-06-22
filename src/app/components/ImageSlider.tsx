@@ -20,7 +20,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
 
     const [acceptingApplication, setApplication] = useState(false)
 
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowWidth, setWindowWidth] = useState<number>(0);
 
     useEffect(() => {
         const handleResize = () => {
