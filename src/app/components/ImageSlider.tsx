@@ -76,7 +76,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
 
             </div>
             {acceptingApplication ?
-                <div className='overflow-x-scroll '>
+                <div className='overflow-hidden '>
                     <div
                         className={` flex relative transform gap-0  sm:gap-4 transition-transform duration-300`}
                     // style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
