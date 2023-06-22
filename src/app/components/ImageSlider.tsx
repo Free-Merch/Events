@@ -86,8 +86,9 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
                 </div>
                 : <div className='overflow-x-scroll '>
                     <div
-                        className={` flex relative transform gap-0  sm:gap-4 transition-transform duration-300`}
-                        style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
+                        className={` flex  relative transform gap-0  sm:gap-4 transition-transform duration-300`}
+                        style={{ transform: `translateX(-${currentImageIndex * (window.innerWidth >= 640 ? 28 : 100)}%)` }}
+                        // transform: translateX(${currentImageIndex * (window.innerWidth >= 640 ? 10 : 100)}%);
                     >
                         {images.map((image, index) => (
                             <div key={index} className="w-[100%] sm:w-full h-auto min-w-[28%]  shrink-0 sm:flex-shrink" >
