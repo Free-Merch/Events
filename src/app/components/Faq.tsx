@@ -18,25 +18,28 @@ const Faq = () => {
 
                         <div className='flex  bg-[#F7F7F8] rounded-[10px] mb-[10px] '>
                             <div className='px-[20px] py-[30px] flex justify-between w-[100%] items-center'>
-                                <Disclosures />
+                                <Disclosures 
+                                question={
+                                    "Who Can attend this event?"
+                                } answer={
+                                    "The Event is open to everyone curious about Learning about the vast Evolving Blockchain and Web3 technology. Developers, Designers, skilled artisans, Jobs seekers, community managers, content writers, etc."
+                                }/>
                             </div>
                         </div>
                         <div className='flex  bg-[#F7F7F8] rounded-[10px] mb-[10px] '>
                             <div className='px-[20px] py-[30px] flex justify-between w-[100%] items-center'>
-                                <Disclosures />
+                                <Disclosures question={"Is this Event free? "} answer={"The event is free and open to participation for anyone. "}/>
                             </div>
                         </div>
                         <div className='flex  bg-[#F7F7F8] rounded-[10px] mb-[10px] '>
                             <div className='px-[20px] py-[30px] flex justify-between w-[100%] items-center'>
-                                <Disclosures />
+                                <Disclosures question={"What will You gain at this event? "} 
+                                    answer={
+                                        `Exposure to the Blockchain and Web3 technology, learning from top industry leaders sharing experience on onboarding, opportunities in the Blockchain and leveraging Blockchain to build sustainable businesses. 
+                                        At the event, there will be a lot of Jobs opportunities, swags and merchandise, free crypto giveaways and opportunities to connect with more people.`
+                                    }/>
                             </div>
                         </div>
-                        <div className='flex  bg-[#F7F7F8] rounded-[10px] mb-[10px] '>
-                            <div className='px-[20px] py-[30px] flex justify-between w-[100%] items-center'>
-                                <Disclosures />
-                            </div>
-                        </div>
-                        
                     </div>
 
                 </div>
