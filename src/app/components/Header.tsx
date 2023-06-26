@@ -4,8 +4,8 @@ import { AiOutlineArrowRight } from 'react-icons/ai'
 import { GiFingerPrint } from 'react-icons/gi'
 import Countdown from './Countdown'
 
-const targetDate = new Date('2023-06-20T00:14:59');
-const endTargetDate = new Date('2023-06-20T20:04:59');
+const targetDate = new Date(1690396360480);
+const endTargetDate = new Date(1690596360480);
 const style = { color: "#2ec866", fontSize: "60px" }
 const style1 = { color: "#2ec866", fontSize: "60px" }
 
@@ -25,13 +25,6 @@ const Header = () => {
                     <h1 className='text-[#000000] mt-[60px] font-[600] text-[24px] uppercase leading-[40px]'> Logo </h1>
                 </div>
 
-
-                {/* <p className='absolute right-[3%] bottom-[64%] font-[500] text-[13px] rotate-[-40deg]'>Web2</p>
-                <p className='absolute right-[3%] bottom-[58%] font-[500] text-[13px] rotate-[35deg]'>Web3</p> */}
-
-
-
-
                 <div className='flex justify-center basis-[50%] items-center pt-[60px]'>
                     <div className='text-center  '>
                         <div className='pb-[40px] flex justify-center mx-auto items-center sm:w-full w-[50%]  '>
@@ -42,12 +35,6 @@ const Header = () => {
                         <div >
                             <h2 className='font-[800] font-ppneue text-[20px] md:text-[32px] md:leading-[46.7px] leading-[20px] tracking-[0.48px]'>Product, Community and Future of adoption</h2>
                         </div>
-                        {/* <div className='pt-[20px] font-[500] text-[16px] relative text-center'>
-                            <h3 className='text-center'>Get Started</h3>
-                            <span className='absolute right-[10000px] md:top-[25.0px] md:right-[250px]'>
-                                <AiOutlineArrowRight />
-                            </span>
-                        </div> */}
                     </div>
 
                 </div>
