@@ -2,11 +2,11 @@ import Image from 'next/image'
 import AboutEvent from './components/AboutEvent'
 import Faq from './components/Faq'
 import Header from './components/Header'
-import PastEvent from './components/PastEvent'
 import Rights from './components/Rights'
 import Speak from './components/Speak'
 import Speakers from './components/Speakers'
 import Sponsors from './components/Sponsors'
+import PastEventsSlider from './components/PastEventsSlider'
 
 const images = [
   '/Rectangle 5.png',
@@ -24,7 +24,7 @@ export default function Home() {
       <AboutEvent />
       <Sponsors />
       <Speakers />
-      <PastEvent />
+      <PastEventsSlider /> 
       <Speak />
       <Faq />
       <Rights />
