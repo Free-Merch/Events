@@ -136,7 +136,7 @@ const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) 
                         <div className="text-center text-[#FFFFFF]">
 
 
-                            <div className=" flex mx-auto w-[100%] text-center sm:w-[55%] items-start space-x-4 font-ppneue justify-around pb-[46px]">
+                            <div className=" flex mx-auto w-[100%] text-center sm:w-[55%] items-start space-x-4 font-ppneue justify-center sm:justify-around pb-[46px]">
 
 
                                 {timeLeft.days > 0 && (
