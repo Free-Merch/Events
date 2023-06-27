@@ -22,7 +22,7 @@ const Header = () => {
             </div>
             <div className='container relative mx-auto h-[90vh] flex flex-col justify-between'>
                 <div className='border-[#000000] sm:p-[0] px-[20px]'>
-                    <h1 className='text-[#000000] mt-[60px] font-[600] text-[24px] uppercase leading-[40px]'> Logo </h1>
+                    <h1 className='text-[#000000] mt-[60px] font-[600] text-[24px] uppercase leading-[40px]'> </h1>
                 </div>
 
                 <div className='flex justify-center basis-[50%] items-center pt-[60px]'>

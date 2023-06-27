@@ -36,6 +36,7 @@ const Faq = () => {
                                 <Disclosures question={"What will You gain at this event? "} 
                                     answer={
                                         `Exposure to the Blockchain and Web3 technology, learning from top industry leaders sharing experience on onboarding, opportunities in the Blockchain and leveraging Blockchain to build sustainable businesses. 
+                                        
                                         At the event, there will be a lot of Jobs opportunities, swags and merchandise, free crypto giveaways and opportunities to connect with more people.`
                                     }/>
                             </div>

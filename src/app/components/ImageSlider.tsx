@@ -108,12 +108,12 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
               ))}
 
               <div className="absolute lg:block z-[10] top-[20%]  lg:top-[20%] left-0 sm:left-[10%] border-[1px] bg-[#FFFFFF] w-[100%] sm:w-[75%]">
-                <div>
-                  <h1 className="text-[#0b1237] text-center mt-[42px] md:mt-[10px] lg:mt-[20px] xl:mt-[47px] xl:mb-[10px]  font-ppneue leading-[24.6px] lg:leading-[69.7px]  font-[800] text-[24px] lg:text-[40px]">
+                <div className='flex justify-center align-middle flex-col mt-[49px] md:mt-[42px] mb-[26px]'>
+                  <h1 className="text-[#0b1237] text-center xl:mb-[10px]  font-ppneue leading-none mb-[18px] font-[800] text-[24px] lg:text-[40px]">
                     We are accepting applications
                   </h1>
                   <a href="#">
-                    <h2 className="relative flex justify-center items-center font-[500] lg:mb-[30px] mb-[29.5px] font-satoshi text-[16px]">
+                    <h2 className="flex justify-center items-center font-[500] font-satoshi text-[16px]">
                       Apply to be a speaker at Buidl: &nbsp;
                       <BsFillArrowRightCircleFill
                         size="20px"

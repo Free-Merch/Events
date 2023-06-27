@@ -18,10 +18,10 @@ const Rights = () => {
           </div>
 
           <h2 className="font-[500] text-[16px] font-satoshi text-center my-[18px]">
-            Product, Community and Future of Adoption
+            Product, Community and Future of Adoption.
           </h2>
           <h3 className="text-center font-[500] text-[12px] font-satoshi mb-[8px]">
-            Sponsor contact details
+            For sponsorship, partnership and enquiries
           </h3>
           <div className="mb-[20px]">
             <div className="sm:flex justify-center block text-center items-center font-[500] font-satoshi text-[14px] leading-[27px] tracking-[0.32px]">
