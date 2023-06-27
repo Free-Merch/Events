@@ -1,21 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
-import { RxDotFilled } from "react-icons/rx";
-import {
-  BsFillArrowLeftCircleFill,
-  BsFillArrowRightCircleFill,
-} from "react-icons/bs";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import ISlider from "./PastEventsSlider";
-
-const images = [
-  "/Rectangle 6.png",
-  "/Rectangle 7.png",
-  "/Rectangle 8.png",
-
-  // Add more image paths here
-];
+import React from "react";
 
 const PastEvent = (props: {image: string, name: string,  summary: string, sponsors: string[]}) => {
     const {image, name, summary, sponsors} = props;
@@ -35,7 +20,7 @@ const PastEvent = (props: {image: string, name: string,  summary: string, sponso
       </div>
       <div className="grow md:w-[60%] w-[100%]">
         <div>
-          <h1 className="font-[800] text-[20px] text-left font-ppneue leading-[46.7px]">
+          <h1 className="font-[800] text-[20px] text-left font-ppneue">
             {name}
           </h1>
           <p className="font-[500] whitespace-pre-line text-[16px] leading-[27px] font-satoshi tracking-[0.32px]">
