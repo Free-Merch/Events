@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-icons/bs';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 import { RxDotFilled } from 'react-icons/rx';
-import { css } from '@emotion/react';
 
 
 interface ImageSliderProps {
@@ -16,15 +15,42 @@ const style = { color: "#0b1237", }
 
 const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
 
+    let defaultValue: number;
+    const [windowWidth, setWindowWidth] = useState<number>(0);
+
+    if (windowWidth > 640) {
+        defaultValue = 4; // Set number for condition set 1
+    } else {
+        defaultValue = 0; // Set number for condition set 2
+    }
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-    const [acceptingApplication, setApplication] = useState(true)
+    const [acceptingApplication, setApplication] = useState(false)
 
-    const [windowWidth, setWindowWidth] = useState<number>(0);
+
+
+    // const [elementWidth, setElementWidth] = useState(0)
+
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         const width = document.getElementById('myElement')?.offsetWidth || 0;
+    //         setElementWidth(width)
+    //         console.log('element width : ', elementWidth);
+
+    //     }
+    //     handleResize();
+    //     window.addEventListener('resize', handleResize)
+
+    //     return () => {
+    //         window.removeEventListener('resize', handleResize);
+    //     }
+    // }, [])
 
     useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
+            console.log('window width: ',windowWidth);
+            
         };
 
         handleResize(); // Initial window width setup
@@ -38,19 +64,15 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
     const nextImage = () => {
         if (currentImageIndex < images.length - 1) {
             setCurrentImageIndex(currentImageIndex + 1);
-            console.log('next clicked');
         }
-
-
-
+        console.log(currentImageIndex);
     }
+
     const prevImage = () => {
         if (currentImageIndex > 0) {
             setCurrentImageIndex(currentImageIndex - 1);
-            console.log('prev clicked');
+
         }
-
-
     }
 
     return (
