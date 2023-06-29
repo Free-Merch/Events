@@ -25,7 +25,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
     }
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-    const [acceptingApplication, setApplication] = useState(false)
+    const [acceptingApplication, setApplication] = useState(true)
 
 
 
