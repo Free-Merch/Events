@@ -15,32 +15,32 @@ const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) 
     const [elementWidth, setElementWidth] = useState(0)
 
     useEffect(() => {
-      const handleResize = () => {
-        const width = document.getElementById('myElement')?.offsetWidth || 0;
-        setElementWidth(width)
-      }
-      handleResize();
-      window.addEventListener('resize',handleResize)
-    
-      return () => {
-        window.removeEventListener('resize',handleResize);
-      }
+        const handleResize = () => {
+            const width = document.getElementById('myElement')?.offsetWidth || 0;
+            setElementWidth(width)
+        }
+        handleResize();
+        window.addEventListener('resize', handleResize)
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
     }, [])
     const [elementHeight, setElementHeight] = useState(0)
 
     useEffect(() => {
-      const handleResizeH = () => {
-        const height = document.getElementById('myElement')?.offsetHeight || 0;
-        setElementHeight(height)
-      }
-      handleResizeH();
-      window.addEventListener('resize',handleResizeH)
-    
-      return () => {
-        window.removeEventListener('resize',handleResizeH);
-      }
+        const handleResizeH = () => {
+            const height = document.getElementById('myElement')?.offsetHeight || 0;
+            setElementHeight(height)
+        }
+        handleResizeH();
+        window.addEventListener('resize', handleResizeH)
+
+        return () => {
+            window.removeEventListener('resize', handleResizeH);
+        }
     }, [])
-    
+
 
     const calculateTimeLeft = () => {
         const difference = +new Date(eventTargetDate) - +new Date();
@@ -83,16 +83,16 @@ const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) 
             {+new Date() > +new Date(eventEndDate) ?
                 <div>
                     <div>
-                        <div className='flex  items-center justify-center mb-[20px]'>
+                        <div className='flex items-center justify-center mb-[20px]'>
 
-                            <div id='myElement' className='border-[1px] border-b-[10px] border-b-[#2AB160] rounded-b-[10%  mx-[20px] relative w-[90%] lg:w-[52%] rounded-[27px] bg-[#0B1237]'>
+                            <div id='myElement' className='border-[1px] border-b-[10px] border-b-[#2AB160]   mx-[20px] relative w-[90%] lg:w-[52%] rounded-[27px] bg-[#0B1237]'>
                                 <Confetti
                                     width={elementWidth}
                                     height={elementHeight}
                                     numberOfPieces={50}
                                     recycle={true}
                                     run={true}
-                                    
+
                                 />
                                 <div className='absolute left-[-3%] top-[-10%]'>
                                     <Image className='md:w-[50%] w-[50%]' src='/Frame25.svg' alt='web3' width={180} height={10} />
@@ -119,7 +119,7 @@ const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) 
                 </div> :
                 <div className='flex   justify-center mb-[20px]'>
 
-                    <div  className='border-[1px]  border-b-[10px] border-b-[#2AB160]  mx-[20px] relative w-[90%] lg:w-[52%] rounded-[27px] bg-[#0B1237]'>
+                    <div className='border-[1px]  border-b-[10px] border-b-[#2AB160]  mx-[20px] relative w-[90%] lg:w-[52%] rounded-[27px] bg-[#0B1237]'>
                         {/* <Confetti
                             width={window.innerWidth/2}
                             height={200}
@@ -136,13 +136,13 @@ const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) 
                         <div className="text-center text-[#FFFFFF]">
 
 
-                            <div className=" flex mx-auto w-[100%] text-center sm:w-[55%] items-center space-x-4 font-ppneue justify-evenly pb-[46px]">
+                            <div className=" flex mx-auto w-[100%] text-center sm:w-[55%] items-start space-x-4 font-ppneue justify-center sm:justify-aroun pb-[46px]">
 
 
                                 {timeLeft.days > 0 && (
                                     <div className=" sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
                                         <div className='relative  text-left'>
-                                            {timeLeft.days} <span className='absolute right-[-80%] sm:right-[-160%] font-[700] sm:text-[32px] text-[24px] '>:</span>
+                                            {timeLeft.days}
                                         </div>
 
                                         <div className='font-[400] text-[14px] text-left'>
@@ -151,16 +151,21 @@ const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) 
                                     </div>
                                 )}
 
+                                <div className='font-[700]  sm:text-[32px] text-[24px]'>:</div>
+
+
 
 
                                 {timeLeft.hours > 0 && (
                                     <div className="sm:font-[800] font-[700] text-[24px] sm:text-[32px] flex flex-col justify-start items-start ">
                                         <div className="relative text-left">
-                                            {addLeadingZero(timeLeft.hours)}<span className='absolute  right-[-80%] sm:right-[-100%]'>:</span>
+                                            {addLeadingZero(timeLeft.hours)}
                                         </div>
                                         <div className="font-[400] text-[14px] text-left">Hours</div>
                                     </div>
                                 )}
+
+                                <div className='font-[700] sm:text-[32px] text-[24px]'>:</div>
 
 
 
@@ -168,14 +173,14 @@ const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) 
                                 {timeLeft.minutes > 0 && (
                                     <div className="sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
                                         <div className="relative text-start">
-                                            {addLeadingZero(timeLeft.minutes)}<span className='absolute sm:right-[-120%]  right-[-80%]'>:</span>
+                                            {addLeadingZero(timeLeft.minutes)}
                                         </div>
                                         <div className=" font-[400] text-[14px] text-left">Mins</div>
                                     </div>
                                 )}
 
 
-
+                                <div className='font-[700] text-center sm:text-[32px] text-[24px]'>:</div>
 
                                 {timeLeft.seconds > 0 || timeLeft.minutes > 0 ?
                                     <div className="sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
