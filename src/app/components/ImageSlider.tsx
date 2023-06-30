@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image'
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-icons/bs';
-import { BiDotsHorizontalRounded } from 'react-icons/bi';
 import { RxDotFilled } from 'react-icons/rx';
-import { css } from '@emotion/react';
+import { acceptingApplications } from '../data/speakers.data';
 
 
 interface ImageSliderProps {
@@ -17,8 +16,6 @@ const style = { color: "#0b1237", }
 const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
-
-    const [acceptingApplication, setApplication] = useState(true)
 
     const [windowWidth, setWindowWidth] = useState<number>(0);
 
@@ -38,7 +35,6 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
     const nextImage = () => {
         if (currentImageIndex < images.length - 1) {
             setCurrentImageIndex(currentImageIndex + 1);
-            console.log('next clicked');
         }
 
 
@@ -47,7 +43,6 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
     const prevImage = () => {
         if (currentImageIndex > 0) {
             setCurrentImageIndex(currentImageIndex - 1);
-            console.log('prev clicked');
         }
 
 
@@ -59,34 +54,35 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan }) => {
           <h1 className="text-[30px] md:text-[32px] whitespace-normal sm:w-[100%] w-[50%] md:font-[800] font-ppneue font-[500]">
             {spePan}
           </h1>
-          <div className="flex  justify-between  items-center">
-            <button className="" disabled={currentImageIndex === 0}>
-              <BsFillArrowLeftCircleFill
-                size={30}
-                onClick={prevImage}
-                className="cursor-pointer  transform "
-              />
-            </button>
-            <div className="flex">
-              <RxDotFilled size={10} className="" />
-              <RxDotFilled size={10} className="" />
-              <RxDotFilled size={10} className="" />
-              <RxDotFilled size={10} className="" />
-            </div>
+          { !acceptingApplications && <div className="flex  justify-between  items-center">
+              <button className="" disabled={currentImageIndex === 0}>
+                <BsFillArrowLeftCircleFill
+                  size={30}
+                  onClick={prevImage}
+                  className="cursor-pointer  transform "
+                />
+              </button>
+              <div className="flex">
+                <RxDotFilled size={10} className="" />
+                <RxDotFilled size={10} className="" />
+                <RxDotFilled size={10} className="" />
+                <RxDotFilled size={10} className="" />
+              </div>
 
-            <button
-              className=""
-              disabled={currentImageIndex === images.length - 1}
-            >
-              <BsFillArrowRightCircleFill
-                size={30}
-                onClick={nextImage}
-                className=" cursor-pointer  transform "
-              />
-            </button>
-          </div>
+              <button
+                className=""
+                disabled={currentImageIndex === images.length - 1}
+              >
+                <BsFillArrowRightCircleFill
+                  size={30}
+                  onClick={nextImage}
+                  className=" cursor-pointer  transform "
+                />
+              </button>
+            </div> 
+          }
         </div>
-        {acceptingApplication ? (
+        {acceptingApplications ? (
           <div className="overflow-hidden ">
             <div
               className={` flex relative transform gap-0  sm:gap-4 transition-transform duration-300`}

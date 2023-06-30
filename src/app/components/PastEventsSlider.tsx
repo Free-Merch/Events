@@ -29,33 +29,35 @@ const PastEventsSlider: React.FC = () => {
           <h1 className="text-[30px] md:text-[32px] whitespace-normal sm:w-[100%] w-[50%] md:font-[800] font-ppneue font-[800] ">
             Past Events
           </h1>
-          <div className="flex  justify-between  items-center">
-            <button className="" disabled={currentPastEventsIndex === 0}>
-              <BsFillArrowLeftCircleFill
-                size={30}
-                style={{ color: "black", border: "2px" }}
-                onClick={goToPreviousImage}
-                className="cursor-pointer  transform "
-              />
-            </button>
-            <div className="flex">
-              <RxDotFilled size={10} className="" />
-              <RxDotFilled size={10} className="" />
-              <RxDotFilled size={10} className="" />
-              <RxDotFilled size={10} className="" />
-            </div>
+          { pastEventsData.length > 1 && 
+            <div className="flex  justify-between  items-center">
+              <button className="" disabled={currentPastEventsIndex === 0}>
+                  <BsFillArrowLeftCircleFill
+                    size={30}
+                    style={{ color: "black", border: "2px" }}
+                    onClick={goToPreviousImage}
+                    className="cursor-pointer  transform "
+                  />
+                </button>
+                <div className="flex">
+                  <RxDotFilled size={10} className="" />
+                  <RxDotFilled size={10} className="" />
+                  <RxDotFilled size={10} className="" />
+                  <RxDotFilled size={10} className="" />
+                </div>
 
-            <button
-              className=""
-              disabled={currentPastEventsIndex === pastEventsData.length - 1}
-            >
-              <BsFillArrowRightCircleFill
-                size={30}
-                onClick={goToNextImage}
-                className=" cursor-pointer  transform "
-              />
-            </button>
-          </div>
+                <button
+                  className=""
+                  disabled={currentPastEventsIndex === pastEventsData.length - 1}
+                >
+                  <BsFillArrowRightCircleFill
+                    size={30}
+                    onClick={goToNextImage}
+                    className=" cursor-pointer  transform "
+                  />
+              </button>
+            </div>
+          }
         </div>
         <div className=" overflow-x-scroll">
           <div
