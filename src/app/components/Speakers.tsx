@@ -37,10 +37,10 @@ const Speakers = () => {
       <div className="container  sm:mx-auto">
         <div className=" flex flex-col px-[17px] sm:px-[100px]  ">
           <div className=" sm:mt-[173px] mt-[80px] ">
-            <ImageSlider images={speakers} spePan="Our Speakers" />
+            <ImageSlider title="speaker" images={speakers} spePan="Our Speakers" />
           </div>
           <div className=" mt-[80px] sm:mb-[170px] mb-[80px]">
-            <ImageSlider images={panelists} spePan="Meet the Panelists" />
+            <ImageSlider title="panelist" images={panelists} spePan="Meet the Panelists" />
           </div>
         </div>
       </div>
