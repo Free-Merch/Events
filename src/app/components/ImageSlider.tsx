@@ -14,14 +14,22 @@ interface ImageSliderProps {
 
 const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan, title }) => {
 
-    const [currentImageIndex, setCurrentImageIndex] = useState(0)
-
+    let defaultValue: number;
     const [windowWidth, setWindowWidth] = useState<number>(0);
+
+    if (windowWidth > 640) {
+        defaultValue = 4; // Set number for condition set 1
+    } else {
+        defaultValue = 0; // Set number for condition set 2
+    }
+    const [currentImageIndex, setCurrentImageIndex] = useState(0)
     const slider = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
+            console.log('window width: ',windowWidth);
+            
         };
 
         handleResize(); // Initial window width setup
@@ -38,8 +46,8 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan, title }) => {
           (windowWidth >= 640 ? 28 : 100)/100 * slider.current.clientWidth;
       }
     }
+
     const prevImage = () => {
-      console.log(slider.current?.clientWidth)
       if (slider.current) {
         slider.current.scrollLeft -=
           (windowWidth >= 640 ? 28 : 100)/100 * slider.current.clientWidth;

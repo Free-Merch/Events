@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import React, { FormEvent, useState } from 'react'
+import { toast } from 'react-toastify'
 
 interface FormData {
     name: string;
@@ -26,6 +27,10 @@ const Speak = () => {
 
     const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        const{name,email,message} = formData
+        if (!name || !email || !message){
+            return toast.error('All field required')
+        }
         const url = 'https://api.emailjs.com/api/v1.0/email/send'
         const data = {
             "user_id": "4gvp3whyoHSADhGum",
@@ -50,11 +55,13 @@ const Speak = () => {
         if (response.ok) {
             // const jsonResponse = await response.json();
             console.log('done');
+            
             setFormData({
                 name: '',
                 email: '',
                 message: '',
             })
+            return toast.success('Message sent')
 
         } else {
             console.log('Request failed with status:', response.status);
@@ -92,11 +99,11 @@ const Speak = () => {
                     <div>
                         <form className='sm:w-[50% mx-4 sm:mx-auto flex flex-col justify-center sm:mt-[40px] mt-0  sm:mr-[43px] gap-[10px]' action="#" onSubmit={sendEmail}>
                             <div className='  flex flex-wrap sm:flex-nowrap  justify-center items-center gap-1 '>
-                                <input name='name' value={formData.name} onChange={handleChange} className='bg-[#0B1237]  block border-[1px] w-[100%] rounded-[12px] border-[rgba(255,255,255,0.5)]  text-[#ffffff px-[20px] py-[16px]' placeholder='Full name' type="text" />
-                                <input name='email' value={formData.email} onChange={handleChange} className='bg-[#0B1237] block border-[1px] w-[100%] rounded-[12px] border-[rgba(255,255,255,0.5)]  px-[20px] py-[16px] ' placeholder='E-mail' type="email" />
+                                <input name='name'  value={formData.name} onChange={handleChange} className='bg-[#0B1237]  block border-[1px] w-[100%] rounded-[12px] border-[rgba(255,255,255,0.5)]  text-[#ffffff px-[20px] py-[16px]' placeholder='Full name' type="text" />
+                                <input name='email'  value={formData.email} onChange={handleChange} className='bg-[#0B1237] block border-[1px] w-[100%] rounded-[12px] border-[rgba(255,255,255,0.5)]  px-[20px] py-[16px] ' placeholder='E-mail' type="email" />
                             </div>
 
-                            <textarea name='message' value={formData.message} onChange={handleChange} className='bg-[#0B1237] border-[rgba(255,255,255,0.5)]  box-border pl-[20px] pt-[20px] pb-[100px] border-[1px] rounded-[12px]' placeholder='Your message' >
+                            <textarea name='message'  value={formData.message} onChange={handleChange} className='bg-[#0B1237] border-[rgba(255,255,255,0.5)]  box-border pl-[20px] pt-[20px] pb-[100px] border-[1px] rounded-[12px]' placeholder='Your message' >
                             </textarea>
                             
                             <button type='submit' className='mb-[40px] z-[20]  uppercase border-[1px] rounded-[12px] font-[700] text-[16px] border-[#2EC866] leading-[21.6px] bg-[#2EC866] pt-[14px] pb-[12px]'>send</button>
