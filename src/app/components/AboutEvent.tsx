@@ -39,28 +39,12 @@ const AboutEvent = () => {
             <div className="mt-[0px] h-auto sm:mt-[30px] mx-[10px] sm:mx-auto">
               <Image
                 className="w-[100%] h-auto object-cover "
-                src="/AboutEvent.png"
+                src="/AboutEvent.svg"
                 alt="img1"
                 height={100}
                 width={400}
               />
             </div>
-
-            {/* <div className='absolute   flex justify-evenly top-0 w-[100%]  h-[100%] border-[1px] border-white left-0'>
-                        <div className='h-auto w-[50%] flex flex-col'>
-                            <div className='w-[100%]  h-[50%] z-[1] rounded-[50%] block border-[1px] border-[green] '>
-
-                            </div>
-                            <div className='w-[100%]  z-[1] h-[50%] rounded-[50%] border-[1px] border-[green]'>
-
-                            </div>
-                        </div>
-
-                        <div className='w-[50%] z-[1] h-[auto]  rounded-[50%] border-[1px] border-[green]  '>
-
-
-                        </div>
-                    </div> */}
           </div>
         </div>
       </div>
