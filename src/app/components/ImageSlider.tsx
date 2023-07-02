@@ -114,7 +114,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan, title }) => {
                   <h1 className="text-[#0b1237] text-center xl:mb-[10px]  font-ppneue leading-none mb-[18px] font-[800] text-[24px] lg:text-[40px]">
                     We are accepting applications
                   </h1>
-                  <a href="#">
+                  <a href="https://forms.gle/eREk1cxujEaNqdwt6" target="_blank">
                     <h2 className="flex justify-center items-center font-[500] font-satoshi text-[16px]">
                       Apply to be a {title} at Buidl: &nbsp;
                       <BsFillArrowRightCircleFill
