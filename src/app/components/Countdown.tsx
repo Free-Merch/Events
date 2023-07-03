@@ -151,7 +151,10 @@ const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) 
                                     </div>
                                 )}
 
-                                <div className='font-[700]  sm:text-[32px] text-[24px]'>:</div>
+                                {timeLeft.days > 0 && (
+                                    <div className='font-[700]  sm:text-[32px] text-[24px]'>:</div>
+                                )}
+
 
 
 
@@ -165,7 +168,9 @@ const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) 
                                     </div>
                                 )}
 
-                                <div className='font-[700] sm:text-[32px] text-[24px]'>:</div>
+                                {timeLeft.hours > 0 && (
+                                    <div className='font-[700]  sm:text-[32px] text-[24px]'>:</div>
+                                )}
 
 
 
@@ -180,9 +185,11 @@ const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) 
                                 )}
 
 
-                                <div className='font-[700] text-center sm:text-[32px] text-[24px]'>:</div>
+                                {timeLeft.minutes > 0 && (
+                                    <div className='font-[700]  sm:text-[32px] text-[24px]'>:</div>
+                                )}
 
-                                {timeLeft.seconds > 0 || timeLeft.minutes > 0 ?
+                                {timeLeft.seconds > 0 && timeLeft.minutes > 0 && timeLeft.hours>0 && timeLeft.days>0 ?
                                     <div className="sm:font-[800] font-[700] text-[24px] sm:text-[32px] ">
                                         <div className="text-left">
                                             {addLeadingZero(timeLeft.seconds)}
