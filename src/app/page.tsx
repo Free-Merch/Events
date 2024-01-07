@@ -16,7 +16,7 @@ export default function Home() {
       
       <Header />
       <AboutEvent />
-      <Sponsors />
+      {/* <Sponsors /> */}
       <Speakers />
       <PastEventsSlider /> 
       <Speak />

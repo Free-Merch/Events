@@ -1,6 +1,6 @@
 const pastEvents = [
   {
-    name: "Blockchain and Business Conference.",
+    name: "Blockchain and Business Conference 1.0.",
     image: "/blockchain&business.jpg",
     summary: `
       I attended Blockchain and Business conference, and I must say it was an enlightening experience. One session in particular caught my attention, where I gained a deeper understanding of how blockchain applications can enhance businesses. The speaker emphasized the importance of improving the language and terminology associated with blockchain, especially for local businesses to grasp its potential.

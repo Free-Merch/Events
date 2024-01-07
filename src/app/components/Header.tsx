@@ -4,8 +4,8 @@ import { AiOutlineArrowRight } from 'react-icons/ai'
 import { GiFingerPrint } from 'react-icons/gi'
 import Countdown from './Countdown'
 
-const targetDate = new Date("2023-09-08T08:00:00.000Z");
-const endTargetDate = new Date("2023-09-08T16:00:00.000Z");
+const targetDate = new Date("2024-03-23T09:00:00.000Z");
+const endTargetDate = new Date("2024-03-23T16:00:00.000Z");
 const style = { color: "#2ec866", fontSize: "60px" }
 const style1 = { color: "#2ec866", fontSize: "60px" }
 
