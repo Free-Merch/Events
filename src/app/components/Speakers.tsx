@@ -41,13 +41,15 @@ const Speakers = () => {
               title="speaker"
               images={speakers}
               spePan="Our Speakers"
+              applicationLink="https://docs.google.com/forms/d/e/1FAIpQLSc4EbYNVQFFUQejA6iZtn-RcCHAwWMRNFVKys8hmKxW69rLNA/viewform"
             />
           </div>
           <div className=" mt-[80px] sm:mb-[170px] mb-[80px]">
             <ImageSlider
-              title="panelist"
+              title="volunteer"
               images={panelists}
-              spePan="Meet the Panelists"
+              spePan="Meet our Volunteers"
+              applicationLink="https://docs.google.com/forms/d/e/1FAIpQLSdhfPRyy0Q_nAlQbmSWGmahG9SEfdJI50jdTOPof9jf852wXQ/viewform"
             />
           </div>
         </div>
