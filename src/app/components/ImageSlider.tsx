@@ -117,7 +117,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan, title, applic
                   </h1>
                   <a href={applicationLink} target="_blank">
                     <h2 className="flex justify-center items-center font-[500] font-satoshi text-[16px]">
-                      Apply to be a {title} at Buidl: &nbsp;
+                      Apply to be a {title} at BUIDL &nbsp;
                       <BsFillArrowRightCircleFill
                         size="20px"
                         fill="#2ec866"

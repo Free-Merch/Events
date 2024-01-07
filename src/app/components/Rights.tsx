@@ -86,7 +86,7 @@ const Rights = () => {
             </div>
             <div>
               <a
-                href="https://www.linkedin.com/in/buidlcon/"
+                href="https://www.linkedin.com/company/thebuidlcon/"
                 className="flex mr-[10px]"
               >
                 <Image

@@ -27,7 +27,7 @@ const PastEventsSlider: React.FC = () => {
       <div className="container mx-auto sm:mb-[90px] mb-[50px] ">
         <div className="px-[20px] sm:flex-nowrap flex-wrap flex justify-between items-center font-[800] mb-[48px] text-left text-[32px] ">
           <h1 className="text-[30px] md:text-[32px] whitespace-normal sm:w-[100%] w-[50%] md:font-[800] font-ppneue font-[800] ">
-            Past Events
+            Past Event
           </h1>
           { pastEventsData.length > 1 && 
             <div className="flex  justify-between  items-center">
