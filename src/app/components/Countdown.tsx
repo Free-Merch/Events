@@ -78,7 +78,14 @@ const Countdown: React.FC<CountdownProps> = ({ eventTargetDate, eventEndDate }) 
         return value < 10 ? `0${value}` : value;
     };
 
+    // In nextjs, sometimes even after using "use client" it still tries to SSR the children of the Component, you can combact this by explicitly checking if the window type is undefined or using useEffect to only render the content after hydration
+    const [isClient, setIsClient] = useState(false)
+    useEffect(() => {
+        setIsClient(true)
+    },[])
+
     return (
+        isClient && 
         <div>
             {+new Date() > +new Date(eventEndDate) ?
                 <div>
