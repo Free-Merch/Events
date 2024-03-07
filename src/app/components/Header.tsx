@@ -43,7 +43,9 @@ const Header = () => {
                 </div>
 
                 <div className='' >
-                    <Countdown eventTargetDate={targetDate}eventEndDate={endTargetDate} />
+                    <Countdown 
+                    // eventTargetDate={targetDate} 
+                    eventEndDate={endTargetDate} />
                 </div>
 
 

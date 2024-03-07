@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
-import { getAnalytics } from "firebase/analytics";
+// import { getAnalytics } from "firebase/analytics";
 
 export const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -13,6 +13,6 @@ export const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-const analytics = getAnalytics(app);
+// const analytics = getAnalytics(app);
 
 export { database, app };

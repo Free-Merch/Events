@@ -6,12 +6,12 @@ import { Timer } from "./Timer";
 import { CalenderIcon, LocationIcon } from "../Icons/Custom";
 
 interface CountdownProps {
-  eventTargetDate: Date;
+//   eventTargetDate: Date;
   eventEndDate: Date;
 }
 
 const Countdown: React.FC<CountdownProps> = ({
-  eventTargetDate,
+//   eventTargetDate,
   eventEndDate,
 }) => {
   const [elementWidth, setElementWidth] = useState(0);
