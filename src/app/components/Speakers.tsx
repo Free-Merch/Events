@@ -39,6 +39,7 @@ const Speakers = () => {
           <div className=" sm:mt-[173px] mt-[80px] ">
             <ImageSlider
               title="speaker"
+              isSpeaker={true}
               images={speakers}
               spePan="Apply to be a speaker"
               applicationLink="https://docs.google.com/forms/d/e/1FAIpQLSc4EbYNVQFFUQejA6iZtn-RcCHAwWMRNFVKys8hmKxW69rLNA/viewform"
@@ -46,6 +47,7 @@ const Speakers = () => {
           </div>
           <div className=" mt-[80px] sm:mb-[170px] mb-[80px]">
             <ImageSlider
+            isSpeaker={false}
               title="volunteer"
               images={panelists}
               spePan="Apply to be Volunteer"
