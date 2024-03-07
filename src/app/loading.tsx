@@ -1,6 +1,6 @@
 const Loader = () => {
   return (
-    <div className="text-left rtl:text-right">
+    <div className="text-left rtl:text-right grid place-items-center w-full mx-auto">
       <div role="status">
         <svg
           aria-hidden="true"
