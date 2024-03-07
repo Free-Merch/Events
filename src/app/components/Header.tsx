@@ -2,7 +2,9 @@ import Image from 'next/image'
 import React from 'react'
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import { GiFingerPrint } from 'react-icons/gi'
-import Countdown from './Countdown'
+import Countdown from './CountDown/Countdown'
+import { FullWidthButton } from './Buttons'
+import Link from 'next/link'
 
 const targetDate = new Date("2024-03-23T09:00:00.000Z");
 const endTargetDate = new Date("2024-03-23T16:00:00.000Z");
@@ -20,30 +22,34 @@ const Header = () => {
             <div className='absolute w-[100%]  bottom-[-20px]  sm:bottom-[-15px]  sm:left-0'>
                 <Image className=' ' src='/Vector-Header1.svg' alt='vec1' width={1500} height={1000} />
             </div>
-            <div className='container relative mx-auto h-[90vh] flex flex-col justify-between'>
-                <div className='border-[#000000] sm:p-[0] px-[20px]'>
+            <div className='container relative mx-auto h-[calc(90vh-2rem)] ipad:h-[calc(90vh-4rem)] flex flex-col justify-between'>
+                {/* <div className='border-[#000000] sm:p-[0] px-[20px]'>
                     <h1 className='text-[#000000] mt-[60px] font-[600] text-[24px] uppercase leading-[40px]'> </h1>
-                </div>
+                </div> */}
 
                 <div className='flex justify-center basis-[50%] items-center pt-[60px]'>
                     <div className='text-center  '>
-                        <div className='pb-[40px] flex justify-center mx-auto items-center sm:w-full w-[50%]  '>
+                        <div className='lpb-[40px] flex justify-center mx-auto items-center sm:w-full w-[50%]'>
                             <div className=''>
-                                <Image src='/Buidl_.svg' alt='build' width={450} height={100} />
+                                <Image src='/Buidlcon2.0.svg' alt='buildIcon' width={450} height={100} />
+
                             </div>
                         </div>
-                        <div >
-                            <h2 className='font-[800] font-ppneue text-[20px] md:text-[32px] md:leading-[46.7px] leading-[20px] tracking-[0.48px]'>Product, Community and Future of adoption.</h2>
+                        <div className=' py-10' >
+                            <h2 className='font-[400] font-ppneue text-[20px] md:text-[32px] md:leading-[46.7px] leading-[20px] tracking-[0.48px]'>Product, Community and Future of adoption.</h2>
                         </div>
                     </div>
 
                 </div>
 
                 <div className='' >
-                    <Countdown eventTargetDate={targetDate}eventEndDate={endTargetDate} />
+                    <Countdown 
+                    // eventTargetDate={targetDate} 
+                    eventEndDate={endTargetDate} />
                 </div>
 
 
+                <Link href="/registration" className=' max-w-[250px] tablet:max-w-[360px] w-full mx-auto'><FullWidthButton label='Register Now' color='#0B1237'  /></Link>
             </div>
 
         </div>

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
 import { acceptingApplications } from '../data/speakers.data';
+import { TextModal } from './Modal';
 
 
 interface ImageSliderProps {
@@ -14,6 +15,7 @@ interface ImageSliderProps {
 
 
 const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan, title, applicationLink }) => {
+    const [openModal, setOpenModal] = useState(false);
 
     let defaultValue: number;
     const [windowWidth, setWindowWidth] = useState<number>(0);
@@ -115,7 +117,13 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan, title, applic
                   <h1 className="text-[#0b1237] text-center xl:mb-[10px]  font-ppneue leading-none mb-[18px] font-[800] text-[24px] lg:text-[40px]">
                     We are accepting applications
                   </h1>
-                  <a href={applicationLink} target="_blank">
+                  <button
+                    // href={applicationLink}
+                    //  target="_blank"
+                    onClick={() => {
+                      setOpenModal(true);
+                    }}
+                  >
                     <h2 className="flex justify-center items-center font-[500] font-satoshi text-[16px]">
                       Apply to be a {title} at BUIDL &nbsp;
                       <BsFillArrowRightCircleFill
@@ -126,7 +134,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan, title, applic
                         className="inline"
                       />
                     </h2>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -152,6 +160,21 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, spePan, title, applic
               ))}
             </div>
           </div>
+        )}
+        {openModal && (
+          <TextModal
+            label="Notice"
+            Text={
+              <span className=' font-medium text-base text-left'>
+                The application to be a volunteer has ended. <br /> Check your email if
+                you applied. See you at BUIDLCON.
+              </span>
+            }
+            isOpen={openModal}
+            setIsOpen={setOpenModal}
+            ButtonLabel='Close'
+
+          />
         )}
       </div>
     );
