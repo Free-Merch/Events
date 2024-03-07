@@ -1,10 +1,14 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
-import Head from 'next/head';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'
+import "./globals.css";
+import { Inter } from "next/font/google";
+import Head from "next/head";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Rights from "./components/Rights";
+import { Navbar } from "./components/Navigation";
+import React from "react";
+import Loading from "./loading";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Blockchain and Business Conference",
@@ -14,7 +18,7 @@ export const metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -33,8 +37,12 @@ export default function RootLayout({
         />
       </Head>
       <body className={inter.className}>
-        <ToastContainer />
-        {children}
+        <React.Suspense fallback={<Loading />}>
+          <ToastContainer />
+          <Navbar />
+          {children}
+          <Rights />
+        </React.Suspense>
       </body>
     </html>
   );
