@@ -15,6 +15,7 @@ const style1 = { color: "#2ec866", fontSize: "60px" };
 
 const Header = () => {
    const [hmm, setHmmm] = useState<Record<string, User>>({});
+
   const url = `https://freemerch-a8b7d-default-rtdb.firebaseio.com/registered_users.json`;
 
 
@@ -22,7 +23,7 @@ const Header = () => {
       fetch(url)
         .then((response) => response.json())
         .then((data) => {
-          console.log("FireBase Successfully Fetched Success:", data);
+          // console.log("FireBase Successfully Fetched Success:", data);
           setHmmm(data);
         })
         .catch((error) => console.error("Error:", error));
