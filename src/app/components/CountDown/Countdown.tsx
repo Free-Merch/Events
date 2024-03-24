@@ -6,12 +6,12 @@ import { Timer } from "./Timer";
 import { CalenderIcon, LocationIcon } from "../Icons/Custom";
 
 interface CountdownProps {
-//   eventTargetDate: Date;
+  //   eventTargetDate: Date;
   eventEndDate: Date;
 }
 
 const Countdown: React.FC<CountdownProps> = ({
-//   eventTargetDate,
+  //   eventTargetDate,
   eventEndDate,
 }) => {
   const [elementWidth, setElementWidth] = useState(0);
@@ -61,6 +61,11 @@ const Countdown: React.FC<CountdownProps> = ({
   }
 
   const [timeLeft, setTimeLeft] = useState(updateTimeLeft);
+  const [targetDateForEvent, setTargetDateForEvent] = useState<Date>(
+    new Date("2024-04-04T00:00:00")
+  );
+
+  // console.log("Here *****************", targetDateForEvent);
 
   const url = `https://freemerch-a8b7d-default-rtdb.firebaseio.com/countdown_day.json`;
 
@@ -68,8 +73,9 @@ const Countdown: React.FC<CountdownProps> = ({
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        console.log("FireBase Successfully Fetched Success:", data);
+        // console.log("FireBase Successfully Fetched Success:", data);
         const targetDate = new Date(data);
+        setTargetDateForEvent(targetDate);
         const targetTimeInMilliseconds = targetDate.getTime();
         setCurrentDay(targetTimeInMilliseconds);
       })
@@ -95,13 +101,15 @@ const Countdown: React.FC<CountdownProps> = ({
     setIsClient(true);
   }, []);
 
+  // console.log("*****************", eventEndDate);
+
   const NewNoticeStyles =
     "uppercase font-satoshi font-medium text-xs tablet:text-base text-white";
 
   return (
     isClient && (
       <div>
-        {+new Date() > +new Date(eventEndDate) ? (
+        {+new Date() > +new Date(targetDateForEvent) ? (
           <div>
             <div>
               <div className="flex items-center justify-center mb-[20px]">
@@ -123,7 +131,7 @@ const Countdown: React.FC<CountdownProps> = ({
                   <div className="text-center text-[#FFFFFF]">
                     <div className=" flex mx-auto w-[100%] text-center sm:w-[55%] items-center space-x-4 font-ppneue justify-evenly pb-[46px]">
                       <div className="sm:font-[800] text-[#2AB160] font-[700] text-[24px] sm:text-[32px] ">
-                        Ended
+                        {targetDateForEvent && "Ended"}
                       </div>
                     </div>
                   </div>
