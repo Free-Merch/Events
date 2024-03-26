@@ -26,7 +26,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <div
-      className={` py-4 pl-[10%] tablet:pl-[100px] sticky top-0 z-[999999] backdrop-blur-sm w-full transition-transform duration-500 ease-in-out ${
+      className={` py-4 pl-[10%] tablet:pl-[100px] sticky top-0 z-[9999] backdrop-blur-sm w-full transition-transform duration-500 ease-in-out ${
         isHidden ? "transform -translate-y-full" : " bg-white"
       } `}
     >

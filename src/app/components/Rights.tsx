@@ -4,7 +4,7 @@ import { SocialIcon } from 'react-social-icons'
 
 const Rights = () => {
   return (
-    <div>
+    <div className=' flex flex-col justify-end'>
       <div className="bg-[#000D20] font-satoshi flex justify-center items-center">
         <div className="text-[#FFFFFF] ">
           <div className="flex justify-center sm:mt-[74px] mt-[60px]">

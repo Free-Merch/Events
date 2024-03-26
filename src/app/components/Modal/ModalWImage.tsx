@@ -30,14 +30,14 @@ export const ModalWImage = ({
       {isOpen && (
         <div
           onClick={closeModal}
-          className=" bg-black/70 backdrop-blur-lg fixed left-0 top-0 w-screen h-screen grid place-items-center"
+          className=" bg-black/70 backdrop-blur-lg fixed left-0 top-0 w-screen h-screen grid place-items-center z-[999995]"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className=" relative z-[999999] bg-white w-full max-w-[593px] min-h-[487px] rounded-xl shadow-xl p-10 grid place-items-center gap-11 text-center"
+            className=" relative z-[999999] bg-white w-full max-w-[593px] min-h-[487px] rounded-xl shadow-xl p-5 tablet:p-10 grid place-items-center gap-6 text-center font-ppneue"
           >
             {Image}
-            <h1 className=" font-extrabold text-[28px] text-black font-ppneue">
+            <h1 className=" font-extrabold text-lg tablet:text-[28px] text-black font-ppneue">
               {label}
             </h1>
             {Text}
