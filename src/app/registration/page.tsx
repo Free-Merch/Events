@@ -71,7 +71,7 @@ const Registration = () => {
   };
 
   return (
-    <div className=" -mt-8 ipad:-mt-16  min-h-screen grid place-items-center">
+    <div className="mb-[10vh] h-[90svh] ipad:h-[90svh] grid place-items-center">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className=" shadow-xl rounded-xl p-4 tablet:p-10 max-w-[300px] tablet:max-w-[593px] w-full min-h-[609px]"
@@ -83,7 +83,7 @@ const Registration = () => {
           <RegisterMobile />
         </div>
 
-        <div className=" mt-11 mb-11 flex flex-col gap-4 font-ppneue">
+        <div className=" my-11 flex flex-col gap-4 font-ppneue">
           {InputsArr.map((input, index) => (
             <React.Fragment key={index}>
               <Input
@@ -122,11 +122,20 @@ const Registration = () => {
           Image={<img src="/empty_file.svg" className=" cursor-not-allowed" />}
           label="Registration successful!"
           Text={
-            <p className=" text-center font-normal text-base text-black font-ppneue">
-              Your registration has been completed. Look forward to e-mails and
-              update about the event in your inbox shortly. See you at
-              BUIDLCON2.0
-            </p>
+            <div className=" flex flex-col gap-6">
+              <p className=" text-center font-normal text-base text-black font-ppneue">
+                Your registration has been completed. Look forward to e-mails
+                and update about the event in your inbox shortly. See you at
+                BUIDLCON2.0
+              </p>
+              <a
+                target="_blank"
+                href="https://getdp.co/oW6"
+                className="  text-green-400 text-base font-normal text-center"
+              >
+                Click here to get a customized DP
+              </a>
+            </div>
           }
           ButtonLabel="Done"
         />
