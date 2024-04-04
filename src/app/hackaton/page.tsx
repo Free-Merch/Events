@@ -204,7 +204,15 @@ const InputsArr = [
 
 const InputsArr2 = [
   {
-    label: "Follow @discoverBOS on X and input your X username below",
+    label: (
+      <span>
+        Follow{" "}
+        <Link href="https://Twitter.com/TheBlockchainOS" target="_blank">
+          @discoverBOS
+        </Link>{" "}
+        on X and input your X username below
+      </span>
+    ),
     label2: "X Username",
     Icon: <AtIcon />,
     name: "xName" as InputName,
@@ -215,7 +223,7 @@ const InputsArr2 = [
         Join{" "}
         <Link
           className=" text-[#008B46] font-normal"
-          href="https://discoverBOSHackathon"
+          href="https://t.me/Discover_BOS/1"
           target="_blank"
         >
           https://discoverBOSHackathon
