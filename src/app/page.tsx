@@ -24,7 +24,7 @@ export default function Home() {
   //       // const csv = parse(Object.values(data));
 
   //       // start from 360... when slicing like you have to offset of -2 from your original start value, use -3 to start from the last one
-  //       const values = Object.values(data).slice(906);
+  //       const values = Object.values(data).slice(1035);
   //       const csv = parse(values);
 
   //       // Download the CSV file
@@ -37,7 +37,7 @@ export default function Home() {
     <main className="min-h-screen ">
       <Header />
       <AboutEvent />
-      <Sponsors/>
+      <Sponsors />
       <Speakers />
       <PastEventsSlider />
       <Speak />
