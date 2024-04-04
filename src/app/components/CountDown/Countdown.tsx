@@ -62,7 +62,7 @@ const Countdown: React.FC<CountdownProps> = ({
 
   const [timeLeft, setTimeLeft] = useState(updateTimeLeft);
   const [targetDateForEvent, setTargetDateForEvent] = useState<Date>(
-    new Date("2024-04-04T00:00:00")
+    new Date("2024-04-04T12:00:00")
   );
 
   // console.log("Here *****************", targetDateForEvent);
@@ -117,23 +117,49 @@ const Countdown: React.FC<CountdownProps> = ({
                   id="myElement"
                   className="border-[1px] border-b-[10px] border-b-[#2AB160]   mx-[20px] relative w-[90%] lg:w-[52%] rounded-[27px] bg-[#0B1237]"
                 >
-                  <Confetti
-                    width={elementWidth}
-                    height={elementHeight}
-                    numberOfPieces={50}
-                    recycle={true}
-                    run={true}
-                  />
+                  {targetDateForEvent > new Date("2024-04-07T00:00:00") ? (
+                    ""
+                  ) : (
+                    <Confetti
+                      width={elementWidth}
+                      height={elementHeight}
+                      numberOfPieces={50}
+                      recycle={true}
+                      run={true}
+                      className=" z-[9999]"
+                    />
+                  )}
+
                   <Web3Image />
                   <h1 className="uppercase text-center pt-[47px] pb-[21px] font-[400] text-[16px] font-satoshi text-[#FFFFFF]">
                     Event
                   </h1>
                   <div className="text-center text-[#FFFFFF]">
-                    <div className=" flex mx-auto w-[100%] text-center sm:w-[55%] items-center space-x-4 font-ppneue justify-evenly pb-[46px]">
+                    <div className=" flex  mx-auto w-[100%] text-center sm:w-[55%] items-center space-x-4 font-ppneue justify-evenly pb-[46px]">
                       <div className="sm:font-[800] text-[#2AB160] font-[700] text-[24px] sm:text-[32px] ">
-                        {targetDateForEvent && "Ended"}
+                        {targetDateForEvent > new Date("2024-04-07T00:00:00")
+                          ? "Ended"
+                          : "Today"}
                       </div>
                     </div>
+                      {targetDateForEvent > new Date("2024-04-07T00:00:00") ? (
+                        ""
+                      ) : (
+                        <div className=" flex flex-col tablet:flex-row justify-between items-center max-w-[570px] mx-auto mb-3 tablet:mb-6">
+                          <p className=" flex gap-3 items-center">
+                            <CalenderIcon />
+                            <span className={NewNoticeStyles}>
+                              Date: April 4-6, 2024
+                            </span>
+                          </p>
+                          <p className=" flex gap-3 items-center">
+                            <LocationIcon />
+                            <span className={NewNoticeStyles}>
+                              Venue: ODUDUWA HALL, OAU, IFE.
+                            </span>
+                          </p>
+                        </div>
+                      )}
                   </div>
                 </div>
               </div>
